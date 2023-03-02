@@ -1,17 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './home';
-import '../components/navbar.scss'
-import "@fontsource/roboto/300.css";
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+
+import Home from '../screens/home/home';
+import '../screens/home/home.scss';
+
+import About from '../screens/about/about';
+
+import Skills from '../screens/skills/skills';
+
+import Contact from '../screens/contact/contact';
+
+import Projects from '../screens/projects/projects';
+
+import Banner from '../components/banner/banner'
+import '../components/banner/banner.scss'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    children: [
+      { index: true, element: <Banner /> },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/skills",
+        element: <Skills />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: "/projects",
+        element: <Projects />
+      }
+    ]
   },
 ]);
 

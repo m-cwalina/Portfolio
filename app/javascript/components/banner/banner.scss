@@ -1,0 +1,28 @@
+.title {
+  font-size: 100px;
+}
+
+.title-description {
+  font-size: 80px;
+  color: #A5A5A5;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 250px;
+}
+
+.social-icons-container {
+  display: flex;
+  margin: 50px;
+  justify-content: space-between;
+  width: 12%;
+}
+
+.social-icon {
+  color: #5C9BB6;
+  transform: scale(2.0);
+}
