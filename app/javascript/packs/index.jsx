@@ -7,7 +7,7 @@ import '../screens/home/home.scss';
 
 import About from '../screens/about/about';
 
-import Skills from '../screens/skills/skills';
+import Skills, {loader as skillsLoader} from '../screens/skills/skills';
 
 import Contact from '../screens/contact/contact';
 
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/skills",
-        element: <Skills />
+        element: <Skills />,
+        loader: skillsLoader
       },
       {
         path: "/contact",

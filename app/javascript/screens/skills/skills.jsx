@@ -1,8 +1,21 @@
 import React from 'react';
-import { Card, CardHeader, CardActions, CardContent, Typography, Button, Box, IconButton, Tooltip } from '@mui/material';
+import { Card, CardActions, CardContent, Typography, Button, Box, IconButton, Tooltip } from '@mui/material';
+import {useLoaderData} from "react-router-dom";
 import JavascriptIcon from '@mui/icons-material/Javascript';
 
+export async function loader() {
+  const URL = `/api/v1/skills`;
+  try {
+    let response = await fetch(URL);
+    let skills = await response.json();
+    return skills;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export default function Skills() {
+  const skills = useLoaderData();
 
   function Title() {
     return (
