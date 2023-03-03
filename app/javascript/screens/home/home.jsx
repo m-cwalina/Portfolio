@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from './logo.png'
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
@@ -7,8 +7,6 @@ import CodeIcon from '@mui/icons-material/Code';
 import { Link, Outlet } from "react-router-dom";
 
 export default function Home() {
-  const [hover, setHover] = useState(false);
-
   return (
     <div className='app'>
       <div className='navbar'>
