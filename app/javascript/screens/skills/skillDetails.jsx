@@ -25,6 +25,9 @@ const DetailedCard = ({skill}) => {
         <Typography variant="h3" component="div" sx={{ color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
           {skill.title}
         </Typography>
+        <Typography variant="h5" component="div" sx={{ color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
+          Strength
+        </Typography>
         <ProgressBar variant='success' now={skill.strength} label={`${skill.strength}%`} />
       </CardContent>
     </Card>
