@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#home'
   get '/contact', to: 'pages#home'
   get '/skills', to: 'pages#home'
+  get '/skills/:id', to: 'pages#home'
   get '/projects', to: 'pages#home'
 
   namespace :api, defaults: { format: :json } do

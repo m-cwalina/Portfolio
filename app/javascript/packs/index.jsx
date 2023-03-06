@@ -8,6 +8,8 @@ import '../screens/home/home.scss';
 import About from '../screens/about/about';
 
 import Skills, {loader as skillsLoader} from '../screens/skills/skills';
+import SkillDetails, {loader as skillDetailsLoader} from '../screens/skills/skillDetails';
+import '../screens/skills/skills.scss';
 
 import Contact from '../screens/contact/contact';
 
@@ -30,7 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/skills",
         element: <Skills />,
-        loader: skillsLoader
+        loader: skillsLoader,
+        children: [
+          {
+            path: '/skills/:skillId',
+            element: <SkillDetails />,
+            loader: skillDetailsLoader,
+          }
+        ]
       },
       {
         path: "/contact",
