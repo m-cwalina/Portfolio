@@ -14,6 +14,7 @@ import HerokuIcon from '../../icons/heroku.png'
 import GithubIcon from '../../icons/github.png'
 import GitIcon from '../../icons/git.png'
 import ReactRouterIcon from '../../icons/react-router.png'
+import BootstrapIcon from '../../icons/bootstrap.png'
 
 export default function Icon(skill) {
 
@@ -34,6 +35,7 @@ export default function Icon(skill) {
       case 'Git': return <img src={GitIcon} className='icons'></img>
       case 'Docker': return <img src={DockerIcon} className='icons'></img>
       case 'React-Router': return <img src={ReactRouterIcon} className='icons'></img>
+      case 'Bootstrap': return <img src={BootstrapIcon} className='icons'></img>
       default: return null
     }
   }
