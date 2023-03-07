@@ -1,8 +1,9 @@
 import React from 'react';
 import { useLoaderData } from "react-router-dom";
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, Stack } from '@mui/material';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Icon from './icons'
+import Icon from './icons';
+import StrengthIcon from '../../icons/strength.png';
 
 export async function loader({ params }) {
   const URL = `/api/v1/skills/${params.skillId}`;
@@ -17,7 +18,7 @@ export async function loader({ params }) {
 
 const DetailedCard = ({skill}) => {
   return (
-    <Card variant="outlined" sx={{ maxWidth: 700, minWidth: 600, margin: '15px', backgroundColor: '#121212', border: '3px solid #FFFFFF;', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)' }}>
+    <Card variant="outlined" sx={{ maxWidth: 900, minWidth: 800, backgroundColor: '#121212', border: '3px solid #FFFFFF;', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)' }}>
       <CardContent sx={{ margin: 5 }}>
         <Typography align='center'>
           <Icon icon={skill.icon} style={{width: 60}} />
@@ -25,10 +26,10 @@ const DetailedCard = ({skill}) => {
         <Typography variant="h3" component="div" sx={{ color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
           {skill.title}
         </Typography>
-        <Typography variant="h5" component="div" sx={{ color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
-          Strength
-        </Typography>
-        <ProgressBar variant='success' now={skill.strength} label={`${skill.strength}%`} />
+          <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
+            <Typography sx={{width: '20%'}}><img src={StrengthIcon} className='icons'></img></Typography>
+            <Typography sx={{width: '80%'}}><ProgressBar variant='success' now={skill.strength} label={`${skill.strength}% strength`} /></Typography>
+        </Stack>
       </CardContent>
     </Card>
   )
