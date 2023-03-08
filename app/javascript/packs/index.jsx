@@ -6,6 +6,7 @@ import Home from '../screens/home/home';
 import '../screens/home/home.scss';
 
 import About from '../screens/about/about';
+import '../screens/about/about.scss';
 
 import Skills, {loader as skillsLoader} from '../screens/skills/skills';
 import SkillDetails, {loader as skillDetailsLoader} from '../screens/skills/skillDetails';
