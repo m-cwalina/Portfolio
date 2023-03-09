@@ -74,17 +74,17 @@ portfolio = Project.create(
 )
 
 ProjectSkill.create([
-    {project_id: connectgolf.id, skills_id: 1}, {project_id: connectgolf.id, skills_id: 2}, {project_id: connectgolf.id, skills_id: 3},
-    {project_id: connectgolf.id, skills_id: 4}, {project_id: connectgolf.id, skills_id: 5}, {project_id: connectgolf.id, skills_id: 9},
-    {project_id: connectgolf.id, skills_id: 10}, {project_id: connectgolf.id, skills_id: 11}, {project_id: connectgolf.id, skills_id: 12},
-    {project_id: connectgolf.id, skills_id: 13}, {project_id: connectgolf.id, skills_id: 14}, {project_id: connectgolf.id, skills_id: 16},
+    {project_id: connectgolf.id, skill_id: 1}, {project_id: connectgolf.id, skill_id: 2}, {project_id: connectgolf.id, skill_id: 3},
+    {project_id: connectgolf.id, skill_id: 4}, {project_id: connectgolf.id, skill_id: 5}, {project_id: connectgolf.id, skill_id: 9},
+    {project_id: connectgolf.id, skill_id: 10}, {project_id: connectgolf.id, skill_id: 11}, {project_id: connectgolf.id, skill_id: 12},
+    {project_id: connectgolf.id, skill_id: 13}, {project_id: connectgolf.id, skill_id: 14}, {project_id: connectgolf.id, skill_id: 16},
 
-    {project_id: pfandme.id, skills_id: 1}, {project_id: pfandme.id, skills_id: 2}, {project_id: pfandme.id, skills_id: 3},
-    {project_id: pfandme.id, skills_id: 9}, {project_id: pfandme.id, skills_id: 10}, {project_id: pfandme.id, skills_id: 12},
-    {project_id: pfandme.id, skills_id: 13}, {project_id: pfandme.id, skills_id: 14}, {project_id: pfandme.id, skills_id: 16},
+    {project_id: pfandme.id, skill_id: 1}, {project_id: pfandme.id, skill_id: 2}, {project_id: pfandme.id, skill_id: 3},
+    {project_id: pfandme.id, skill_id: 9}, {project_id: pfandme.id, skill_id: 10}, {project_id: pfandme.id, skill_id: 12},
+    {project_id: pfandme.id, skill_id: 13}, {project_id: pfandme.id, skill_id: 14}, {project_id: pfandme.id, skill_id: 16},
 
-    {project_id: portfolio.id, skills_id: 1}, {project_id: portfolio.id, skills_id: 2}, {project_id: portfolio.id, skills_id: 3},
-    {project_id: portfolio.id, skills_id: 4}, {project_id: portfolio.id, skills_id: 5}, {project_id: portfolio.id, skills_id: 9},
-    {project_id: portfolio.id, skills_id: 10}, {project_id: portfolio.id, skills_id: 11}, {project_id: portfolio.id, skills_id: 12},
-    {project_id: portfolio.id, skills_id: 13}, {project_id: portfolio.id, skills_id: 14}, {project_id: portfolio.id, skills_id: 16},
+    {project_id: portfolio.id, skill_id: 1}, {project_id: portfolio.id, skill_id: 2}, {project_id: portfolio.id, skill_id: 3},
+    {project_id: portfolio.id, skill_id: 4}, {project_id: portfolio.id, skill_id: 5}, {project_id: portfolio.id, skill_id: 9},
+    {project_id: portfolio.id, skill_id: 10}, {project_id: portfolio.id, skill_id: 11}, {project_id: portfolio.id, skill_id: 12},
+    {project_id: portfolio.id, skill_id: 13}, {project_id: portfolio.id, skill_id: 14}, {project_id: portfolio.id, skill_id: 16},
 ])
