@@ -31,7 +31,7 @@ const BioCard = () => {
         Born and raised in California. Developing web and mobile applications from
         frontend to backend is my obsession. I'm committed to writing CLEAN code
         and sharp UIs with each new iteration. The rewarding feeling of when the code
-        correctly compiles is like an addiction.
+        correctly compiles is an addiction.
       </Typography>
     </Box>
   )
@@ -73,30 +73,30 @@ const InterestsCard = () => {
         <Box sx={{width:225}}>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={ClubsIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Golf</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Golf</Typography>
           </Stack>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={PlaneIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Aviation</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Aviation</Typography>
           </Stack>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={SkiIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Skiing</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Skiing</Typography>
           </Stack>
         </Box>
 
         <Box sx={{width: 225}}>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={MountainIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Mountains</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Mountains</Typography>
           </Stack>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={MusicIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Music</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Music</Typography>
           </Stack>
           <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
             <Typography sx={{ width: '30%' }} align='center'><img src={TechIcon} className='icons'></img></Typography>
-            <Typography sx={{ width: '30%' }} align='left' variant='h5'>Tech</Typography>
+            <Typography sx={{ width: '30%' }} color="#A5A5A5" align='left' variant='h5'>Tech</Typography>
           </Stack>
         </Box>
       </Box>

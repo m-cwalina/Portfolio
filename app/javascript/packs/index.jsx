@@ -15,6 +15,8 @@ import '../screens/skills/skills.scss';
 import Contact from '../screens/contact/contact';
 
 import Projects from '../screens/projects/projects';
+import '../screens/projects/projects.scss';
+
 
 import Banner from '../components/banner/banner'
 import '../components/banner/banner.scss'

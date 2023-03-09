@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_07_132806) do
+ActiveRecord::Schema.define(version: 2023_03_09_104103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "languages", force: :cascade do |t|
+    t.string "language"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_languages_on_project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.string "description"
+    t.string "github"
+    t.string "learn"
+    t.string "code_snippet"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "skills", force: :cascade do |t|
     t.string "title"
@@ -24,4 +43,5 @@ ActiveRecord::Schema.define(version: 2023_03_07_132806) do
     t.string "year"
   end
 
+  add_foreign_key "languages", "projects"
 end
