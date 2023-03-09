@@ -1,6 +1,6 @@
 .bio-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 75px;
   margin-bottom: 200px;
   align-items: center;
@@ -27,7 +27,7 @@
 
 .languages-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 200px;
   align-items: center;
 }
