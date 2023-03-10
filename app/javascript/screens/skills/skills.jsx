@@ -10,7 +10,6 @@ export async function loader() {
   try {
     let response = await fetch(URL);
     let skills = await response.json();
-    console.log(skills)
     return skills;
   } catch (error) {
     console.error(error);
@@ -33,7 +32,7 @@ const SkillCard = ({ skill }) => (
       </CardActions>
     </Card>
   </React.Fragment>
-);
+)
 
 export default function Skills() {
   const skills = useLoaderData();

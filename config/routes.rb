@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   get '/skills', to: 'pages#home'
   get '/skills/:id', to: 'pages#home'
   get '/projects', to: 'pages#home'
+  get '/projects/:id', to: 'pages#home'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :skills, only: %i[index show]
+      resources :projects, only: %i[index show]
     end
   end
 end

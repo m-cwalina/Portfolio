@@ -1,62 +1,60 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import ProfilePic from '../../icons/profile.png'
+import React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { useLoaderData, Link, Outlet } from "react-router-dom";
+import Image from './images'
+
+export async function loader() {
+  const URL = `/api/v1/projects`;
+  try {
+    let response = await fetch(URL);
+    let projects = await response.json();
+    return projects;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const Content = ({project}) => (
+  <React.Fragment>
+    <Card sx={{ maxWidth: 400, backgroundColor: '#212020', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)' }}>
+       <CardContent sx={{padding: 0}}>
+          <CardMedia
+            sx={{ height: 240}}
+            src=''
+          >
+            <Image image={project.image}/>
+          </CardMedia>
+          <Typography gutterBottom variant='h3' align='center' color="#FFFFFF" padding='16px'>
+            {project.title}
+          </Typography>
+       </CardContent>
+      <CardActions>
+        <Link to={`${project.id}`}><Button size="small">Learn More</Button></Link>
+      </CardActions>
+    </Card>
+  </React.Fragment>
+)
 
 export default function Projects() {
-  const [index, setIndex] = useState(0);
+  const projects = useLoaderData();
 
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-  const CarouselEffect = () => {
-    return (
-      <Carousel activeIndex={index} onSelect={handleSelect}>
-        <Carousel.Item>
-          <img
-            style={{ width: 900, height: 600 }}
-            src={ProfilePic}
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            style={{ width: 900, height: 600 }}
-            src={ProfilePic}
-            alt="Second slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            style={{width: 900, height: 600}}
-            src={ProfilePic}
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    );
-  }
+  const projectCards = projects.map((project) => (
+    <Content project={project} key={project.id} />
+  ));
 
   return (
-    <div ClassName='carousel-container'>
-      <CarouselEffect />
-    </div>
+    <>
+      <div className='cards-container'>
+        {projectCards}
+      </div>
+      <div className="outlet">
+        <Outlet />
+      </div>
+    </>
   )
 }

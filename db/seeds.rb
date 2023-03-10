@@ -36,7 +36,7 @@ connectgolf = Project.create(
     learn: 'This project brought together React.js with React-Router to build a SPA appliaction.
             I also moved into Chart.js to show data in a friendly UI format. The Rails API handles
             authentication through Devise and PostgreSQL for a DB.',
-    code_snippet: 'friendship_model',
+    code_snippet: 'ConnectGolf',
     code_snippet_text: "This self-referential model allows for user to become friends with other users. The friendship
                         model is a join table that has user and friends as references. Friend refers to the class User
                         as seen on line 3. The callback create_inverse is called everytime the create method is called.
@@ -52,7 +52,7 @@ pfandme = Project.create(
                   being connected with a PfandMe employee to pick them up.',
     learn: 'In this project I learned how to use a gem to connect the nearest employee with a user. The gem calculates the
             distance between both user and employee. I displayed this information on a map for a clear UI',
-    code_snippet: 'appointments_controller',
+    code_snippet: 'PfandMe',
     code_snippet_text: 'In this create action I first create a new instance of Appointment with the strong pramas
                         defined under private. I save a user to the instance variable, @appointment, defined above.
                         I set that equal to the current_user (helper from devise). I save this appointment in order for
@@ -67,7 +67,7 @@ portfolio = Project.create(
     description: 'The portfolio showecases most of my previous work and myself.',
     learn: 'I learned how to abstract larger React Components into more manageable functions. I learned to pass
             arguments through functions to create a more robust function to be rendered inside the React component',
-    code_snippet: 'skills.jsx',
+    code_snippet: 'Portfolio',
     code_snippet_text: 'I am using React MUI for React UI components and React-Router for API calls and routing.
                         Here, I pass an argument skill through a SkillCard function to then be later iterated over a
                         function called skillList. I then use skillList to display all skills in the render component.'

@@ -14,7 +14,8 @@ import '../screens/skills/skills.scss';
 
 import Contact from '../screens/contact/contact';
 
-import Projects from '../screens/projects/projects';
+import Projects, {loader as projectsLoader} from '../screens/projects/projects';
+import ProjectDetails, {loader as projectDetailsLoader} from '../screens/projects/projectDetails';
 import '../screens/projects/projects.scss';
 
 
@@ -50,7 +51,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/projects",
-        element: <Projects />
+        element: <Projects />,
+        loader: projectsLoader,
+        children: [
+          {
+            path: '/projects/:projectId',
+            element: <ProjectDetails />,
+            loader: projectDetailsLoader,
+          }
+        ]
       }
     ]
   },

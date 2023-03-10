@@ -31,9 +31,9 @@ const DetailedCard = ({skill}) => {
         <Typography variant="h3" component="div" sx={{ color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
           {skill.title}
         </Typography>
-          <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
-            <Typography sx={{width: '20%'}}><img src={StrengthIcon} className='icons'></img></Typography>
-            <Typography sx={{width: '80%'}}><ProgressBar variant='success' animated now={skill.strength} label={`${skill.strength}% strength`} /></Typography>
+        <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
+          <Typography sx={{width: '20%'}}><img src={StrengthIcon} className='icons'></img></Typography>
+          <Typography sx={{width: '80%'}}><ProgressBar variant='success' animated now={skill.strength} label={`${skill.strength}% strength`} /></Typography>
         </Stack>
         <Stack spacing={2} direction='row' justifyContent="center" alignItems="center" marginTop='20px'>
           <Typography sx={{ width: '20%' }}><img src={TimeIcon} className='icons'></img></Typography>
