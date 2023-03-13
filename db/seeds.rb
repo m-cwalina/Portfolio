@@ -41,11 +41,11 @@ connectgolf = Project.create(
             I also moved into Chart.js to show data in a friendly UI format. The Rails API handles
             authentication through Devise and PostgreSQL for a DB.',
     code_snippet: 'ConnectGolf',
-    code_snippet_text: "This self-referential model allows for user to become friends with other users. The friendship
-                        model is a join table that has user and friends as references. Friend refers to the class User
-                        as seen on line 3. The callback create_inverse is called everytime the create method is called.
-                        The callback calls itself so that each user each user has a friendship that is now pending.
-                        The callback check_user makes sure that the user requesting the friendship isn't themselves."
+    code_snippet_text: "These two scope lambda functions are taken from the self-referential User model.
+                        The first function, all_except, is used to find all user_ids except for his/her
+                        user_id. The second lambda finds all users that have no friendship relation to that specific user.
+                        I iterate over all user.friendships that have the correpsonding friend_id. This returns
+                        all users that have no friendship relation. In short, all users that aren't friends"
 )
 
 pfandme = Project.create(

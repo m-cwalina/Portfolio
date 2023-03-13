@@ -2,8 +2,10 @@ import React from 'react';
 import { useLoaderData, Link } from "react-router-dom";
 import { Card, CardContent, CardActions, Typography, Box, Stack, CardMedia} from '@mui/material';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import CodeImage from './codeImage'
+import CodeImage from './codeImage';
 import Icon from '../skills/icons';
+import ProjectIcon from '../../icons/project.png';
+import GitHubLinkIcon from '../../icons/gitlink.png';
 
 export async function loader({ params }) {
   const URL = `/api/v1/projects/${params.projectId}`;
@@ -82,6 +84,7 @@ const ProjectDetailExtras = ({project}) => (
   <Box align='center'
     sx={{
       display: 'grid',
+      justifyContent: 'center',
       gridTemplateColumns: 'repeat(3, 1fr)',
       padding: '30px',
       gridGap: '10px',
@@ -89,31 +92,29 @@ const ProjectDetailExtras = ({project}) => (
       width: '100%'
     }}
   >
-    <Stack>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+    <Stack spacing={2}>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
         Project Link
       </Typography>
-      <Typography variant='body1' align='left' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
-       {project.link}
-      </Typography>
+      <Typography><a href={project.link}><img src={ProjectIcon} className='icons'></img></a></Typography>
     </Stack>
-    <Stack>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+    <Stack spacing={2}>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
         Credentials
       </Typography>
-      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+      <Typography variant='body1' sx={{ fontWeight: 'bold' }} color="#A5A5A5">
         Username: {project.username}
       </Typography>
-      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+      <Typography variant='body1' sx={{ fontWeight: 'bold' }} color="#A5A5A5">
         Password: {project.password}
       </Typography>
     </Stack>
-    <Stack>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+    <Stack spacing={2}>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
         Github Repo
       </Typography>
-      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
-        {project.git}
+      <Typography>
+        <a href={project.git}><img src={GitHubLinkIcon} className='icons'></img></a>
       </Typography>
     </Stack>
   </Box>
