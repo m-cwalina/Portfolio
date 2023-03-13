@@ -43,9 +43,9 @@ connectgolf = Project.create(
     code_snippet: 'ConnectGolf',
     code_snippet_text: "These two scope lambda functions are taken from the self-referential User model.
                         The first function, all_except, is used to find all user_ids except for his/her
-                        user_id. The second lambda finds all users that have no friendship relation to that specific user.
-                        I iterate over all user.friendships that have the correpsonding friend_id. This returns
-                        all users that have no friendship relation. In short, all users that aren't friends"
+                        user_id. The second lambda finds all users that have no friendship relation to that specific
+                        user. I iterate over all user.friendships that have the correpsonding friend_id. This returns
+                        all users that have no friendship relation. In short, all users that aren't current friends."
 )
 
 pfandme = Project.create(
@@ -73,8 +73,8 @@ portfolio = Project.create(
     title: 'My Portfolio',
     image: 'Portfolio',
     link: '',
-    username: '',
-    password: '',
+    username: '-',
+    password: '-',
     git: 'https://github.com/m-cwalina/Portfolio',
     description: 'The portfolio showecases most of my previous work and myself.',
     learn: 'I learned how to abstract larger React Components into more manageable functions. I learned to pass
