@@ -34,6 +34,7 @@ connectgolf = Project.create(
     link: 'https://connectgolf.herokuapp.com',
     username: '1@gmail.com',
     password: 'password',
+    git: 'https://github.com/m-cwalina/ConnectGolf',
     description: 'A web application to connect golfers with their club and other members.
                   Also provided is an Admin DashBoard for a booking system and club statistics.',
     learn: 'This project brought together React.js with React-Router to build a SPA appliaction.
@@ -53,6 +54,7 @@ pfandme = Project.create(
     link: 'https://pfandme2.herokuapp.com',
     username: '1@gmail.com',
     password: 'password',
+    git: 'https://github.com/m-cwalina/PfandMe2.0',
     description: 'This mobile first application connects a user and employee to pick up their recycling at home.
                   The App flows by making a request for your bottles to be retrieved at home and automatically
                   being connected with a PfandMe employee to pick them up.',
@@ -73,6 +75,7 @@ portfolio = Project.create(
     link: '',
     username: '',
     password: '',
+    git: 'https://github.com/m-cwalina/Portfolio',
     description: 'The portfolio showecases most of my previous work and myself.',
     learn: 'I learned how to abstract larger React Components into more manageable functions. I learned to pass
             arguments through functions to create a more robust function to be rendered inside the React component',
