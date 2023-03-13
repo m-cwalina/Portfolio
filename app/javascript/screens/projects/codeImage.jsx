@@ -7,9 +7,9 @@ export default function CodeImage(project) {
 
   const CodeImage = ({ image }) => {
     switch (image) {
-      case 'ConnectGolf': return <img src={ConnectGolfCode} className='images'></img>
-      case 'PfandMe': return <img src={PfandMeCode} className='images'></img>
-      case 'Portfolio': return <img src={PortfolioCode} className='images'></img>
+      case 'ConnectGolf': return <img src={ConnectGolfCode} className='code-images'></img>
+      case 'PfandMe': return <img src={PfandMeCode} className='code-images'></img>
+      case 'Portfolio': return <img src={PortfolioCode} className='code-images'></img>
       default: return null
     }
   }

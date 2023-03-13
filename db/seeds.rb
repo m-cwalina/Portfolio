@@ -47,6 +47,8 @@ connectgolf = Project.create(
 pfandme = Project.create(
     title: 'PfandMe2.0',
     image: "PfandMe",
+    link: 'https://pfandme2.herokuapp.com',
+    username: 
     description: 'This mobile first application connects a user and employee to pick up their recycling at home.
                   The App flows by making a request for your bottles to be retrieved at home and automatically
                   being connected with a PfandMe employee to pick them up.',
