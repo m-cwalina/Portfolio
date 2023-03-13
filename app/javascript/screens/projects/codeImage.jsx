@@ -1,20 +1,20 @@
 import React from 'react';
-import ConnectGolfCode from '../../images/connectgolfcode.jpg';
-import PfandMeCode from '../../images/pfandmecode.jpg';
-import PortfolioCode from '../../images/portfoliocode.jpg';
+import ConnectGolfCode from '../../images/connectgolfcode.png';
+import PfandMeCode from '../../images/pfandmecode.png';
+import PortfolioCode from '../../images/portfoliocode.png';
 
 export default function CodeImage(project) {
 
   const CodeImage = ({ image }) => {
     switch (image) {
-      case 'friendship_model': return <img src={ConnectGolfCode}></img>
-      case 'appointments_controller': return <img src={PfandMeCode}></img>
-      case 'skills.jsx': return <img src={PortfolioCode}></img>
+      case 'ConnectGolf': return <img src={ConnectGolfCode} className='images'></img>
+      case 'PfandMe': return <img src={PfandMeCode} className='images'></img>
+      case 'Portfolio': return <img src={PortfolioCode} className='images'></img>
       default: return null
     }
   }
 
   return (
-    <CodeImage image={project.code_snippet} />
+    <CodeImage image={project.image} />
   )
 }
