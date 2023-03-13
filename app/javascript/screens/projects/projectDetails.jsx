@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, Link } from "react-router-dom";
-import { Card, CardContent, CardActions, Typography, Box, Stack, CardMedia, autocompleteClasses} from '@mui/material';
+import { Card, CardContent, CardActions, Typography, Box, Stack, CardMedia} from '@mui/material';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import CodeImage from './codeImage'
 import Icon from '../skills/icons';
@@ -64,12 +64,7 @@ const ProjectDetailCard = ({project}) => (
       <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
         {project.code_snippet_text}
       </Typography>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
-        Takeaway
-      </Typography>
-      <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
-        {project.learn}
-      </Typography>
+      <ProjectDetailExtras project={project}/>
     </CardContent>
   </Card>
 )
@@ -81,6 +76,47 @@ const ProjectDetailIcons = ({languages}) => (
       <Typography color='#FFFFFF'>{language.title}</Typography>
     </Stack>
   ))
+)
+
+const ProjectDetailExtras = ({project}) => (
+  <Box align='center'
+    sx={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      padding: '30px',
+      gridGap: '10px',
+      margin: 'auto',
+      width: '100%'
+    }}
+  >
+    <Stack>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+        Project Link
+      </Typography>
+      <Typography variant='body1' align='left' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+       {project.link}
+      </Typography>
+    </Stack>
+    <Stack>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+        Credentials
+      </Typography>
+      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+        Username: {project.username}
+      </Typography>
+      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+        Password: {project.password}
+      </Typography>
+    </Stack>
+    <Stack>
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#FFFFFF">
+        Github Repo
+      </Typography>
+      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+        {project.git}
+      </Typography>
+    </Stack>
+  </Box>
 )
 
 export default function projectDetails() {
