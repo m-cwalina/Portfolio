@@ -3,24 +3,19 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from '../screens/home/home';
-import '../screens/home/home.scss';
 
 import About from '../screens/about/about';
-import '../screens/about/about.scss';
 
 import Skills, {loader as skillsLoader} from '../screens/skills/skills';
 import SkillDetails, {loader as skillDetailsLoader} from '../screens/skills/skillDetails';
-import '../screens/skills/skills.scss';
 
 import Contact from '../screens/contact/contact';
 
 import Projects, {loader as projectsLoader} from '../screens/projects/projects';
 import ProjectDetails, {loader as projectDetailsLoader} from '../screens/projects/projectDetails';
-import '../screens/projects/projects.scss';
-
 
 import Banner from '../components/banner/banner'
-import '../components/banner/banner.scss'
+
 
 
 const router = createBrowserRouter([

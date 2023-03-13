@@ -15,6 +15,11 @@
  */
 
 @import "bootstrap/scss/bootstrap";
+@import 'about';
+@import 'banner';
+@import 'home';
+@import 'projects';
+@import 'skills';
 
  html, body {
   background-color: #121212;
