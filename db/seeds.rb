@@ -31,6 +31,9 @@ Skill.create([
 connectgolf = Project.create(
     title: 'ConnectGolf',
     image: 'ConnectGolf',
+    link: 'https://connectgolf.herokuapp.com',
+    username: '1@gmail.com',
+    password: 'password',
     description: 'A web application to connect golfers with their club and other members.
                   Also provided is an Admin DashBoard for a booking system and club statistics.',
     learn: 'This project brought together React.js with React-Router to build a SPA appliaction.
@@ -48,7 +51,8 @@ pfandme = Project.create(
     title: 'PfandMe2.0',
     image: "PfandMe",
     link: 'https://pfandme2.herokuapp.com',
-    username: 
+    username: '1@gmail.com',
+    password: 'password',
     description: 'This mobile first application connects a user and employee to pick up their recycling at home.
                   The App flows by making a request for your bottles to be retrieved at home and automatically
                   being connected with a PfandMe employee to pick them up.',
@@ -64,8 +68,11 @@ pfandme = Project.create(
 )
 
 portfolio = Project.create(
-    title: 'Portfolio',
+    title: 'My Portfolio',
     image: 'Portfolio',
+    link: '',
+    username: '',
+    password: '',
     description: 'The portfolio showecases most of my previous work and myself.',
     learn: 'I learned how to abstract larger React Components into more manageable functions. I learned to pass
             arguments through functions to create a more robust function to be rendered inside the React component',
@@ -78,8 +85,8 @@ portfolio = Project.create(
 ProjectSkill.create([
     {project_id: connectgolf.id, skill_id: 1}, {project_id: connectgolf.id, skill_id: 2}, {project_id: connectgolf.id, skill_id: 3},
     {project_id: connectgolf.id, skill_id: 4}, {project_id: connectgolf.id, skill_id: 5}, {project_id: connectgolf.id, skill_id: 9},
-    {project_id: connectgolf.id, skill_id: 10}, {project_id: connectgolf.id, skill_id: 11}, {project_id: connectgolf.id, skill_id: 12},
-    {project_id: connectgolf.id, skill_id: 13}, {project_id: connectgolf.id, skill_id: 14}, {project_id: connectgolf.id, skill_id: 16},
+    {project_id: connectgolf.id, skill_id: 10}, {project_id: connectgolf.id, skill_id: 12}, {project_id: connectgolf.id, skill_id: 13},
+    {project_id: connectgolf.id, skill_id: 14}, {project_id: connectgolf.id, skill_id: 16},
 
     {project_id: pfandme.id, skill_id: 1}, {project_id: pfandme.id, skill_id: 2}, {project_id: pfandme.id, skill_id: 3},
     {project_id: pfandme.id, skill_id: 9}, {project_id: pfandme.id, skill_id: 10}, {project_id: pfandme.id, skill_id: 12},
@@ -87,6 +94,6 @@ ProjectSkill.create([
 
     {project_id: portfolio.id, skill_id: 1}, {project_id: portfolio.id, skill_id: 2}, {project_id: portfolio.id, skill_id: 3},
     {project_id: portfolio.id, skill_id: 4}, {project_id: portfolio.id, skill_id: 5}, {project_id: portfolio.id, skill_id: 9},
-    {project_id: portfolio.id, skill_id: 10}, {project_id: portfolio.id, skill_id: 11}, {project_id: portfolio.id, skill_id: 12},
-    {project_id: portfolio.id, skill_id: 13}, {project_id: portfolio.id, skill_id: 14}, {project_id: portfolio.id, skill_id: 16},
+    {project_id: portfolio.id, skill_id: 10}, {project_id: portfolio.id, skill_id: 12},{project_id: portfolio.id, skill_id: 13},
+    {project_id: portfolio.id, skill_id: 14}, {project_id: portfolio.id, skill_id: 16},
 ])
