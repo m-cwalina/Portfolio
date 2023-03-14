@@ -2,6 +2,7 @@ import { Typography, Box } from '@mui/material';
 import React from 'react';
 import Map from './map';
 
+
 export default function Contact() {
 
   return (
