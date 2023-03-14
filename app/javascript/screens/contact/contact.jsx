@@ -1,7 +1,10 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 
 export default function Contact() {
   return (
-    <h1>Contact Page</h1>
+    <Typography align='center' variant='h1' component='div' fontWeight='bold'>
+      Get in Touch
+    </Typography>
   )
 }
