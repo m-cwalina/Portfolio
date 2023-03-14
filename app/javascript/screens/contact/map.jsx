@@ -1,33 +1,31 @@
-import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl from '!mapbox-gl';
-import coordinates from './coordinates.json'
+import React from 'react';
+import GoogleMapReact from 'google-map-react';
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoibWN3YWxpbmEiLCJhIjoiY2xmODFxNmFwMGE1OTN0bzI2cXh1NDhhcCJ9.MftWHNVfXFoGjQj3bW9VPA';
-
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export default function Map() {
-  const mapContainerRef = useRef(null);
-
-
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/streets-v12",
-      center: [-87.65, 41.84],
-      zoom: 5,
-    });
-
-    coordinates.features.map((feature) =>
-      new mapboxgl.Marker().setLngLat(feature.geometry.coordinates).addTo(map)
-    );
-
-    return () => map.remove();
-  }, []);
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627
+    },
+    zoom: 11
+  };
 
   return (
-    <div>
-      <div ref={mapContainerRef} className="map-container" />
+    // Important! Always set the container height explicitly
+    <div style={{ height: '100vh', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.API_KEY }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <AnyReactComponent
+          lat={59.955413}
+          lng={30.337844}
+          text="My Marker"
+        />
+      </GoogleMapReact>
     </div>
   );
 }

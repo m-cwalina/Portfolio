@@ -63,7 +63,5 @@ const router = createBrowserRouter([
 // render an instance of the component in the DOM
 const root = ReactDOM.createRoot(document.getElementById("Index"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <RouterProvider router={router} />
 );

@@ -13,6 +13,7 @@
     "@rails/webpacker": "5.4.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
     "google-map-react": "^2.2.0",
     "mapbox-gl": "^2.13.0",
     "prop-types": "^15.8.1",
@@ -27,6 +28,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
     "webpack-dev-server": "^3"
   }
 }
