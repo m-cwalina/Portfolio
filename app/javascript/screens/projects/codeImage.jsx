@@ -2,6 +2,7 @@ import React from 'react';
 import ConnectGolfCode from '../../images/connectgolfcode.png';
 import PfandMeCode from '../../images/pfandmecode.png';
 import PortfolioCode from '../../images/portfoliocode.png';
+import ChartsCode from '../../images/chartscode.png';
 
 export default function CodeImage(project) {
 
@@ -10,6 +11,7 @@ export default function CodeImage(project) {
       case 'ConnectGolf': return <img src={ConnectGolfCode} className='code-images'></img>
       case 'PfandMe': return <img src={PfandMeCode} className='code-images'></img>
       case 'Portfolio': return <img src={PortfolioCode} className='code-images'></img>
+      case 'Charts': return <img src={ChartsCode} className='code-images'></img>
       default: return null
     }
   }

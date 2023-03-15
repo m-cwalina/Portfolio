@@ -2,6 +2,7 @@ import React from 'react';
 import PortfolioPic from '../../images/portfolio.jpg';
 import ConnectGolfPic from '../../images/connectgolf.jpg';
 import PfandMePic from '../../images/pfandme.jpg';
+import ChartsPic from '../../images/charts.png';
 
 export default function Image(project) {
 
@@ -10,6 +11,7 @@ export default function Image(project) {
       case 'ConnectGolf': return <img src={ConnectGolfPic} className='images'></img>
       case 'PfandMe': return <img src={PfandMePic} className='images'></img>
       case 'Portfolio': return <img src={PortfolioPic} className='images'></img>
+      case 'Charts': return <img src={ChartsPic} className='images'></img>
       default: return null
     }
   }
