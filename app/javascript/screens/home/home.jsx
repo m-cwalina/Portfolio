@@ -3,21 +3,24 @@ import Logo from './logo.png'
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
 import CodeIcon from '@mui/icons-material/Code';
 import { Link, Outlet } from "react-router-dom";
+import { Stack } from '@mui/material';
 
 export default function Home() {
   return (
     <div className='app'>
       <div className='navbar'>
 
-        <div className="logo-container">
+        <Stack spacing={9} direction='row' p={2}>
           <Link to={'/'}>
-            <img className="logo" src={Logo}></img>
+            <div className='icon-link'>
+              <RoofingOutlinedIcon className='navbar-icon' />
+              <p className='navbar-text'>Home</p>
+            </div>
           </Link>
-        </div>
 
-        <div className='links'>
           <Link to={'/about'}>
             <div className='icon-link'>
               <AccountCircleOutlinedIcon className='navbar-icon' />
@@ -45,7 +48,8 @@ export default function Home() {
               <p className='navbar-text'>Skills</p>
             </div>
           </Link>
-        </div>
+        </Stack>
+
       </div>
 
       <div className="container"><Outlet/></div>

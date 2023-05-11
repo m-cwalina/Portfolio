@@ -1,6 +1,12 @@
 a {
-  color: #A5A5A5;
+  color: #FFFFFF;
   text-decoration: none;
+}
+
+.app {
+  background-image: linear-gradient(to bottom, #2980B9, #6DD5FA);
+  height: '100%';
+  width: '100%';
 }
 
 .navbar {
@@ -39,10 +45,15 @@ a {
 }
 
 .navbar-text:hover {
-  color: #5C9BB6;
+  color: #22d3ee;
 }
 
 .navbar-text {
-  color: #A5A5A5;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
 }
 
+.container {
+  margin-bottom: 5px;
+}

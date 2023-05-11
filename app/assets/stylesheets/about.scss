@@ -1,20 +1,16 @@
 .bio-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 75px;
   margin-bottom: 200px;
-  align-items: center;
 }
 
 .profile-pic {
-  min-width: 250px;
-  width: 400px;
-  max-width: 400px;
-  min-height: 250px;
-  height: 400px;
-  max-height: 400px;
+  min-width: 150px;
+  width: 250px;
+  max-width: 350px;
+  min-height: 150px;
+  height: 250px;
+  max-height: 350px;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   object-fit: cover;
 }
 
@@ -53,4 +49,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
+}
+
+.interests-icon {
+  transform: scale(1.5);
+  margin: 7px;
+  color: #000e21;
 }

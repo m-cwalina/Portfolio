@@ -11,9 +11,9 @@ export default function Banner() {
       <Typewriter
         onInit={(typewriter) => {
           typewriter
-            .typeString('<h1 style="font-size: 100px">Matthew Cwalina</h1>')
+            .typeString('<h1 style="font-size: 100px; color: #fafaf9">Matthew Cwalina</h1>')
             .pauseFor(500)
-            .typeString('<h2 style="font-size: 80px; color: #A5A5A5; justify-content: center; display: flex">Full Stack Developer</h2>')
+            .typeString('<h2 style="font-size: 80px; color: #002851; justify-content: center; display: flex">Full Stack Developer</h2>')
             .start();
         }}
       />
