@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardActions, CardContent, Typography} from '@mui/material';
+import React, {useState} from 'react';
+import { Card, CardActions, CardContent, Typography, Box, Stack} from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import {useLoaderData} from "react-router-dom";
 import Icon from './icons';
@@ -16,23 +16,55 @@ export async function loader() {
   }
 }
 
-const SkillCard = ({ skill }) => (
-  <React.Fragment>
-    <Card variant="outlined" sx={{ maxWidth: 330, minWidth: 300, margin: '15px', backgroundColor: '#121212', border: '1px solid #A5A5A5;', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)' }}>
+const SkillCard = ({ skill }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <Card
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      variant="outlined"
+      sx={{
+        maxWidth: 330,
+        minWidth: 300,
+        margin: '15px',
+        backgroundColor: 'transparent',
+        boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+        transition: 'transform 0.3s ease-out',
+      }}>
       <CardContent sx={{margin: 5}}>
-        <Typography align='center'>
-          <Icon icon={skill.icon}/>
-        </Typography>
-        <Typography variant="h6" component="div" sx={{color: '#FFFFFF', fontFamily: "'Roboto', sans- serif" }} align='center'>
-          {skill.title}
-        </Typography>
+        <Stack direction="column" spacing={1} justifyContent="center" alignItems="center">
+          <Box style={{ boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)', width: '50px', borderRadius: '15px'}}>
+            <Icon icon={skill.icon} />
+          </Box>
+          <Typography
+            align='center'
+            variant="h6"
+            component="div"
+            sx={{
+              color: '#FFFFFF',
+              fontFamily: "'Roboto', sans- serif"
+            }}
+          >
+            {skill.title}
+          </Typography>
+        </Stack>
       </CardContent>
       <CardActions sx={{display: 'flex', justifyContent: 'right'}}>
         <KeyboardDoubleArrowRightIcon className='arrow-icon' />
       </CardActions>
     </Card>
-  </React.Fragment>
-)
+  )
+}
 
 export default function Skills() {
   const skills = useLoaderData();
@@ -44,13 +76,13 @@ export default function Skills() {
   ));
 
   return (
-    <>
+    <React.Fragment>
       <div className="card-container">
         {skillList}
       </div>
       <div className="outlet">
         <Outlet />
       </div>
-    </>
+    </React.Fragment>
   )
 }

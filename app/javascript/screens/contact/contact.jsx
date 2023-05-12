@@ -2,9 +2,8 @@ import { Typography, Box, Stack } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import EmailIcon from '../../icons/email'
-import GermanIcon from '../../icons/germannumber'
-import USAIcon from '../../icons/usanumber'
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 export default function Contact() {
   const defaultProps = {
@@ -30,7 +29,42 @@ export default function Contact() {
   )
 
   return (
-    <Box>
+    <Box sx={{marginBottom: 10}}>
+      <Box sx={{
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(10px)',
+        borderRadius: 10,
+        marginBottom: 10,
+        padding: 5
+        }}
+      >
+        <Typography variant='h2' align='center' fontWeight='bold' color="#0c4a6e" gutterBottom>Contact</Typography>
+        <Stack direction="row">
+          <Box width='50%'>
+            <Stack justifyContent='center' alignItems='flex-start'>
+              <Stack direction='row' justifyContent='center' alignItems='flex-start'>
+                <MailOutlineIcon className='interests-icon' />
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">MatthewCwalina@gmail.com</Typography>
+              </Stack>
+              <Stack direction='row' justifyContent='center' alignItems='flex-start'>
+                <PhoneIphoneIcon className='interests-icon' />
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">(+49) 177-3168291</Typography>
+              </Stack>
+              <Stack direction='row' justifyContent='center' alignItems='center'>
+                <PhoneIphoneIcon className='interests-icon' />
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">(+1) 619-9285218</Typography>
+              </Stack>
+            </Stack>
+          </Box>
+          <Box width='50%'>
+            <Typography variant='h6' align='left' fontWeight='bold' color="#FFFFFF">
+              For any business or job opportunities please feel free to text, email or DM me through LinkedIn.
+            </Typography>
+          </Box>
+        </Stack>
+      </Box>
+
       <Box sx={{ height: '400px', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.API_KEY }}
@@ -48,30 +82,6 @@ export default function Contact() {
             text={"San Jose"}
           />
         </GoogleMapReact>
-      </Box>
-
-      <Typography variant='h2' align='center' fontWeight='bold' color="#5AA7BE" gutterBottom marginTop='50px'>Contact Info</Typography>
-
-      <Box display='flex' justifyContent='center' alignItems='center'>
-        <Box display='flex' alignItems='flex-start' flexDirection='column' width='50%'>
-          <Stack spacing={2} direction='row' justifyContent="center" alignItems="center">
-            <Typography align='left'><img src={EmailIcon} className='icons'></img></Typography>
-            <Typography variant='h6' align='center' sx={{ fontWeight: 'bold' }} color="#A5A5A5">MatthewCwalina@gmail.com</Typography>
-          </Stack>
-          <Stack spacing={2} direction='row' justifyContent="center" alignItems="center">
-            <Typography align='left'><img src={GermanIcon} className='icons'></img></Typography>
-            <Typography variant='h6' align='center' sx={{ fontWeight: 'bold' }} color="#A5A5A5">(+49) 177-3168291</Typography>
-          </Stack>
-          <Stack spacing={2} direction='row' justifyContent="center" alignItems="center">
-            <Typography align='left'><img src={USAIcon} className='icons'></img></Typography>
-            <Typography variant='h6' align='center' sx={{ fontWeight: 'bold' }} color="#A5A5A5">(+1) 619-9285218</Typography>
-          </Stack>
-        </Box>
-        <Box display='flex' justifyContent='center' width="50%">
-          <Typography variant='h6' align='justify' fontWeight='bold' color="#FFFFFF">
-            Please feel free to reach out anytime. I am currently looking for work and would love to talk about any current opportunities.
-          </Typography>
-        </Box>
       </Box>
     </Box>
   )

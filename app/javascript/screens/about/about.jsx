@@ -11,8 +11,6 @@ import TurnRightIcon from '@mui/icons-material/TurnRight';
 import SJSUIcon from '../../icons/SJSU.png';
 import LeWagonIcon from '../../icons/lewagon.png';
 import PekingIcon from '../../icons/peking.png';
-import MusicIcon from '../../icons/music.png';
-import TechIcon from '../../icons/tech.png';
 import ProfilePic from '../../icons/profile.png';
 import GermanyIcon from '../../icons/germany.png';
 import USAIcon from '../../icons/usa.png';
@@ -211,7 +209,7 @@ const InterestsCard = () => {
 
 export default function About() {
   return (
-    <React.Fragment>
+    <Box sx={{marginBottom: 10}}>
       <BioCard />
       <Stack direction='row' spacing={2} marginTop={10}>
         <TurnLeftIcon style={{ width: 400, height: 400, transform: 'rotate(180deg)' }} />
@@ -228,6 +226,6 @@ export default function About() {
         <TurnLeftIcon style={{ width: 400, height: 400, transform: 'rotate(180deg)' }} />
         <InterestsCard />
       </Stack>
-    </React.Fragment>
+    </Box>
   )
 }
