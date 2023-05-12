@@ -10,7 +10,7 @@ import { Stack, Box } from '@mui/material';
 
 export default function Home() {
   return (
-    <Box>
+    <div id='content-wrapper'>
       <div className='navbar'>
         <Stack spacing={9} direction='row' p={2}>
           <Link to={'/'}>
@@ -50,6 +50,6 @@ export default function Home() {
         </Stack>
       </div>
       <div className="container"><Outlet/></div>
-    </Box>
+    </div>
   )
 }

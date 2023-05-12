@@ -209,7 +209,7 @@ const InterestsCard = () => {
 
 export default function About() {
   return (
-    <Box sx={{marginBottom: 10}}>
+    <Box>
       <BioCard />
       <Stack direction='row' spacing={2} marginTop={10}>
         <TurnLeftIcon style={{ width: 400, height: 400, transform: 'rotate(180deg)' }} />

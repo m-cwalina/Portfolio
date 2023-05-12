@@ -29,7 +29,7 @@ export default function Contact() {
   )
 
   return (
-    <Box sx={{marginBottom: 10}}>
+    <Box>
       <Box sx={{
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',

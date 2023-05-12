@@ -22,11 +22,25 @@
 @import 'skills';
 @import 'contact';
 
- html, body {
+//  html, body {
+//   font-family: 'Roboto', sans-serif;
+//   color: #FFFFFF;
+//   background-image: linear-gradient(to bottom, #C193C5, #7BC6CC);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//  }
+
+html, body {
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
+  min-height: 100%;
+}
+
+#content-wrapper {
   background-image: linear-gradient(to bottom, #C193C5, #7BC6CC);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
- }
+  min-height: 100vh;
+}
