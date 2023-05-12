@@ -29,6 +29,23 @@ Skill.create([
   {icon: 'MUI', title: 'Material-UI', strength: 75, year: '.5'},
 ])
 
+fortefans = Project.create(
+  title: 'ForteFans',
+  image: 'ForteFans',
+  link: '',
+  username: '',
+  password: '',
+  git: '',
+  description: 'A mobile based application for sharing and tracking links across multiple platforms.',
+  learn: 'Share your music across Social Media platforms',
+  code_snippet: 'ForteFans',
+  code_snippet_text: 'I have created a Spotify controller that has a couple of methods to connect a user to their Spotify account.
+                      The first method takes an authorization code that is retrieved from the React Native Frontend. I pass that code
+                      to the backend in the query parameters seen here. This code is used to retreive an access token. The access token is handled and refreshed
+                      in the spotify service object to make calls to the Spotify API. The other methods call the service object to make requests to the spotify API
+                      and handle errors so that Redux can handle the state incase of of errors returned from the service object.'
+)
+
 connectgolf = Project.create(
   title: 'ConnectGolf',
   image: 'ConnectGolf',
@@ -56,11 +73,10 @@ pfandme = Project.create(
   username: '1@gmail.com',
   password: 'password',
   git: 'https://github.com/m-cwalina/PfandMe2.0',
-  description: 'This mobile first application connects a user and employee to pick up their recycling at home.
-                The App flows by making a request for your bottles to be retrieved at home and automatically
+  description: 'This mobile first application connects a user and PfandMe employee to pick up their recycling at home.
+                The Apps user flow starts by a request for your bottles to be retrieved at home and automatically
                 being connected with a PfandMe employee to pick them up.',
-  learn: 'In this project I learned how to use a gem to connect the nearest employee with a user. The gem calculates the
-          distance between both user and employee. I displayed this information on a map for a clear UI',
+  learn: 'Get your recycling picked up at home!',
   code_snippet: 'PfandMe',
   code_snippet_text: 'In this create action I first create a new instance of Appointment with the strong pramas
                       defined under private. I save a user to the instance variable, @appointment, defined above.
@@ -79,7 +95,7 @@ charts = Project.create(
   git: '',
   description: 'This application was created with codesandbox. It showcases sales representatives and their numbers.
                 Each table row has more detailed information with chart visualizations.',
-  learn: 'In this project I learned how to create a more polished UI with visualizations using Chart.js and MUI react.',
+  learn: 'Charts for data UI visualization',
   code_snippet: 'Charts',
   code_snippet_text: 'This piece of code uses Chart.js to build a detailed chart. The chart takes option labels to
                       determine the amount of days on the x-axis. I check if the data has null values and iterate
@@ -96,8 +112,7 @@ portfolio = Project.create(
   password: '-',
   git: 'https://github.com/m-cwalina/Portfolio',
   description: 'The portfolio showecases most of my previous work and myself.',
-  learn: 'I learned how to abstract larger React Components into more manageable functions. I learned to pass
-          arguments through functions to create a more robust function to be rendered inside the React component',
+  learn: 'My previous work',
   code_snippet: 'Portfolio',
   code_snippet_text: 'I am using React MUI for React UI components and React-Router for API calls and routing.
                       Here, I pass an argument skill through a SkillCard function to then be later iterated over a
@@ -105,6 +120,10 @@ portfolio = Project.create(
 )
 
 ProjectSkill.create([
+  {project_id: fortefans.id, skill_id: 1}, {project_id: fortefans.id, skill_id: 2}, {project_id: fortefans.id, skill_id: 3},
+  {project_id: fortefans.id, skill_id: 6}, {project_id: fortefans.id, skill_id: 7}, {project_id: fortefans.id, skill_id: 9},
+  {project_id: fortefans.id, skill_id: 10}, {project_id: fortefans.id, skill_id: 13}, {project_id: fortefans.id, skill_id: 14},
+
   {project_id: connectgolf.id, skill_id: 1}, {project_id: connectgolf.id, skill_id: 2}, {project_id: connectgolf.id, skill_id: 3},
   {project_id: connectgolf.id, skill_id: 4}, {project_id: connectgolf.id, skill_id: 5}, {project_id: connectgolf.id, skill_id: 9},
   {project_id: connectgolf.id, skill_id: 10}, {project_id: connectgolf.id, skill_id: 12}, {project_id: connectgolf.id, skill_id: 13},

@@ -23,21 +23,21 @@ const ProjectDetailCard = ({project}) => (
     variant="outlined"
     sx={{ minWidth: 1100,
           overflow: 'auto',
-          backgroundColor: '#121212',
-          border: '3px solid #FFFFFF;',
-          boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)'}}
-    >
+          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+          backdropFilter: 'blur(10px)',
+        }}>
     <CardActions sx={{ display: 'flex', justifyContent: 'left' }}>
       <Link to={'/projects'}><KeyboardDoubleArrowLeftIcon className='arrow-icon' /></Link>
     </CardActions>
     <CardContent>
-      <Typography variant='h1' align='center' sx={{ fontWeight: 'bold'}} color='#54C7CF'>
+      <Typography variant='h1' align='center' sx={{ fontWeight: 'bold'}}>
         {project.title}
       </Typography>
-      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px'}} color="#A5A5A5">
+      <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px'}}>
         {project.description}
       </Typography>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
         Languages
       </Typography>
       <Box align='center'
@@ -50,8 +50,8 @@ const ProjectDetailCard = ({project}) => (
       >
         <ProjectDetailIcons languages={project.languages} />
       </Box>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
-        Code Snippet
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
+        Code
       </Typography>
       <CardMedia
         sx={{
@@ -63,9 +63,18 @@ const ProjectDetailCard = ({project}) => (
       >
         <CodeImage image={project.code_snippet} />
       </CardMedia>
-      <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color="#A5A5A5">
+      <Box
+        sx={{
+          backgroundColor: 'white',
+          boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
+          borderRadius: '4px',
+          padding: 1
+        }}
+      >
+        <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color='#555555'>
         {project.code_snippet_text}
       </Typography>
+      </Box>
       <ProjectDetailExtras project={project}/>
     </CardContent>
   </Card>
@@ -73,9 +82,11 @@ const ProjectDetailCard = ({project}) => (
 
 const ProjectDetailIcons = ({languages}) => (
   languages.map((language) =>(
-    <Stack direction='column' spacing={0.5} align='center'>
-      <Typography ><Icon icon={language.icon} /></Typography>
-      <Typography color='#FFFFFF'>{language.title}</Typography>
+    <Stack direction='column' spacing={0.5} justifyContent="center" alignItems="center">
+      <Box style={{ boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)', width: '50px', borderRadius: '15px' }}>
+        <Typography ><Icon icon={language.icon} /></Typography>
+      </Box>
+      <Typography fontWeight='bold'>{language.title}</Typography>
     </Stack>
   ))
 )
@@ -93,24 +104,24 @@ const ProjectDetailExtras = ({project}) => (
     }}
   >
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
         Project Link
       </Typography>
       <Typography><a href={project.link}><img src={ProjectIcon} className='icons'></img></a></Typography>
     </Stack>
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
         Credentials
       </Typography>
-      <Typography variant='body1' sx={{ fontWeight: 'bold' }} color="#A5A5A5">
+      <Typography variant='body1' sx={{ fontWeight: 'bold' }}>
         Username: {project.username}
       </Typography>
-      <Typography variant='body1' sx={{ fontWeight: 'bold' }} color="#A5A5A5">
+      <Typography variant='body1' sx={{ fontWeight: 'bold' }}>
         Password: {project.password}
       </Typography>
     </Stack>
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }} color="#FFFFFF">
+      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
         Github Repo
       </Typography>
       <Typography>

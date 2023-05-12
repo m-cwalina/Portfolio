@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -19,26 +19,47 @@ export async function loader() {
   }
 }
 
-const Content = ({project}) => (
-  <React.Fragment>
-    <Card sx={{ maxWidth: 400, backgroundColor: '#212020', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)' }}>
-       <CardContent sx={{padding: 0}}>
+const Content = ({project}) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <Link to={`${project.id}`}>
+      <Card
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        variant="outlined"
+        sx={{
+          maxWidth: 330,
+          minWidth: 300,
+          margin: '15px',
+          backgroundColor: 'transparent',
+          boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+          transition: 'transform 0.3s ease-out',
+        }}>
+        <CardContent sx={{padding: 0}}>
           <CardMedia
             sx={{ height: 240}}
             src=''
           >
             <Image image={project.image}/>
           </CardMedia>
-          <Typography gutterBottom variant='h3' align='center' color="#FFFFFF" padding='16px'>
+          <Typography variant='h3' fontWeight='bold' align='center' color="#FFFFFF" padding='16px'>
             {project.title}
           </Typography>
-       </CardContent>
-      <CardActions>
-        <Link to={`${project.id}`}><Button size="small">Learn More</Button></Link>
-      </CardActions>
-    </Card>
-  </React.Fragment>
-)
+        </CardContent>
+      </Card>
+    </Link>
+  )
+}
 
 export default function Projects() {
   const projects = useLoaderData();
