@@ -65,7 +65,7 @@ export default function Contact() {
         </Stack>
       </Box>
 
-      <Box sx={{ height: '400px', width: '100%' }}>
+      <Box sx={{ height: '405px', width: '100%', paddingBottom: 2}}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.API_KEY }}
           defaultCenter={defaultProps.center}

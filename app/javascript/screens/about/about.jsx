@@ -222,7 +222,7 @@ export default function About() {
       <Box marginTop={10}>
         <Experience />
       </Box>
-      <Stack direction='row' spacing={2} marginTop={10}>
+      <Stack direction='row' spacing={2} marginTop={10} paddingBottom={1}>
         <TurnLeftIcon style={{ width: 400, height: 400, transform: 'rotate(180deg)' }} />
         <InterestsCard />
       </Stack>

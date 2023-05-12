@@ -38,6 +38,10 @@ a {
   color: #FFFFFF;
 }
 
+// .icon-link:active {
+//   transform: scale(1.5);
+// }
+
 .navbar-text:hover {
   color: #22d3ee;
 }
@@ -46,4 +50,13 @@ a {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
+}
+
+.active-link {
+  transform: scale(1.6);
+}
+
+.active-link .navbar-icon,
+.active-link .navbar-text {
+  color: #22d3ee !important;
 }
