@@ -90,8 +90,8 @@ charts = Project.create(
   title: 'Chart UI',
   image: 'Charts',
   link: 'https://codesandbox.io/s/chart-ui-y5pekr',
-  username: '-',
-  password: '-',
+  username: '',
+  password: '',
   git: '',
   description: 'This application was created with codesandbox. It showcases sales representatives and their numbers.
                 Each table row has more detailed information with chart visualizations.',
@@ -105,11 +105,11 @@ charts = Project.create(
 )
 
 portfolio = Project.create(
-  title: 'My Portfolio',
+  title: 'Portfolio',
   image: 'Portfolio',
   link: '',
-  username: '-',
-  password: '-',
+  username: '',
+  password: '',
   git: 'https://github.com/m-cwalina/Portfolio',
   description: 'The portfolio showecases most of my previous work and myself.',
   learn: 'My previous work',

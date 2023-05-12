@@ -91,8 +91,9 @@ const ProjectDetailIcons = ({languages}) => (
   ))
 )
 
-const ProjectDetailExtras = ({project}) => (
-  <Box align='center'
+const ProjectDetailExtras = ({ project }) => (
+  <Box
+    align="center"
     sx={{
       display: 'grid',
       justifyContent: 'center',
@@ -100,36 +101,54 @@ const ProjectDetailExtras = ({project}) => (
       padding: '30px',
       gridGap: '10px',
       margin: 'auto',
-      width: '100%'
+      width: '100%',
     }}
   >
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
+      <Typography variant="h4" align="center" sx={{ fontWeight: 'bold' }}>
         Project Link
       </Typography>
-      <Typography><a href={project.link}><img src={ProjectIcon} className='icons'></img></a></Typography>
+      {project.link ? (
+        <Typography>
+          <a href={project.link}>
+            <img src={ProjectIcon} className="icons" alt="Project Link Icon" />
+          </a>
+        </Typography>
+      ) : (
+          <Typography>
+            No Project Link
+          </Typography>
+      )}
     </Stack>
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
+      <Typography variant="h4" align="center" sx={{ fontWeight: 'bold' }}>
         Credentials
       </Typography>
-      <Typography variant='body1' sx={{ fontWeight: 'bold' }}>
+      <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
         Username: {project.username}
       </Typography>
-      <Typography variant='body1' sx={{ fontWeight: 'bold' }}>
+      <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
         Password: {project.password}
       </Typography>
     </Stack>
     <Stack spacing={2}>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
+      <Typography variant="h4" align="center" sx={{ fontWeight: 'bold' }}>
         Github Repo
       </Typography>
-      <Typography>
-        <a href={project.git}><img src={GitHubLinkIcon} className='icons'></img></a>
-      </Typography>
+      {project.git ? (
+        <Typography>
+          <a href={project.git}>
+            <img src={GitHubLinkIcon} className="icons" alt="GitHub Repo Icon" />
+          </a>
+        </Typography>
+      ) : (
+        <Typography>
+          None public GitHub
+        </Typography>
+      )}
     </Stack>
   </Box>
-)
+);
 
 export default function projectDetails() {
   const project = useLoaderData();

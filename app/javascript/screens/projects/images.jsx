@@ -3,6 +3,7 @@ import PortfolioPic from '../../images/portfolio.jpg';
 import ConnectGolfPic from '../../images/connectgolf.jpg';
 import PfandMePic from '../../images/pfandme.jpg';
 import ChartsPic from '../../images/charts.png';
+import ForteFans from '../../images/fortefans.png';
 
 export default function Image(project) {
 
@@ -12,6 +13,7 @@ export default function Image(project) {
       case 'PfandMe': return <img src={PfandMePic} className='images'></img>
       case 'Portfolio': return <img src={PortfolioPic} className='images'></img>
       case 'Charts': return <img src={ChartsPic} className='images'></img>
+      case 'ForteFans': return <img src={ForteFans} className='images'></img>
       default: return null
     }
   }
