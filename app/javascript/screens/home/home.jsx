@@ -6,13 +6,12 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
 import CodeIcon from '@mui/icons-material/Code';
 import { Link, Outlet } from "react-router-dom";
-import { Stack } from '@mui/material';
+import { Stack, Box } from '@mui/material';
 
 export default function Home() {
   return (
-    <div className='app'>
+    <Box>
       <div className='navbar'>
-
         <Stack spacing={9} direction='row' p={2}>
           <Link to={'/'}>
             <div className='icon-link'>
@@ -50,9 +49,7 @@ export default function Home() {
           </Link>
         </Stack>
       </div>
-
       <div className="container"><Outlet/></div>
-
-    </div>
+    </Box>
   )
 }
