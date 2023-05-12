@@ -21,24 +21,10 @@ export default function Home() {
             </div>
           </Link>
 
-          <Link to={'/about'}>
-            <div className='icon-link'>
-              <AccountCircleOutlinedIcon className='navbar-icon' />
-              <p className='navbar-text'>About</p>
-            </div>
-          </Link>
-
           <Link to={'/projects'}>
             <div className='icon-link'>
               <AccountTreeOutlinedIcon className='navbar-icon' />
               <p className='navbar-text'>Projects</p>
-            </div>
-          </Link>
-
-          <Link to={'/contact'}>
-            <div className='icon-link'>
-              <ConnectWithoutContactIcon className='navbar-icon' />
-              <p className='navbar-text'>Contact</p>
             </div>
           </Link>
 
@@ -48,8 +34,21 @@ export default function Home() {
               <p className='navbar-text'>Skills</p>
             </div>
           </Link>
-        </Stack>
 
+          <Link to={'/about'}>
+            <div className='icon-link'>
+              <AccountCircleOutlinedIcon className='navbar-icon' />
+              <p className='navbar-text'>About</p>
+            </div>
+          </Link>
+
+          <Link to={'/contact'}>
+            <div className='icon-link'>
+              <ConnectWithoutContactIcon className='navbar-icon' />
+              <p className='navbar-text'>Contact</p>
+            </div>
+          </Link>
+        </Stack>
       </div>
 
       <div className="container"><Outlet/></div>

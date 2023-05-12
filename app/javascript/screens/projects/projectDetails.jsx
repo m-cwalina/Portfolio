@@ -55,7 +55,6 @@ const ProjectDetailCard = ({project}) => (
       </Typography>
       <CardMedia
         sx={{
-          height: 240,
           backgroundColor: '#212020',
           margin: '30px'
            }}
