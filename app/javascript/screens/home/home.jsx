@@ -5,17 +5,20 @@ import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
 import CodeIcon from '@mui/icons-material/Code';
-import { Link, Outlet, NavLink } from "react-router-dom";
+import { useLocation, Outlet, NavLink } from "react-router-dom";
 import { Stack, Box } from '@mui/material';
 
 export default function Home() {
+  const location = useLocation();
+  const isActive = location.pathname === '/';
+
   return (
     <div id='content-wrapper'>
       <div className='navbar'>
         <Stack spacing={9} direction='row' p={2}>
-          <NavLink to={'/'} activeClassName='active-link'>
+          <NavLink to="/">
             <div className='icon-link'>
-              <RoofingOutlinedIcon className='navbar-icon' />
+              <RoofingOutlinedIcon className='navbar-icon'/>
               <p className='navbar-text'>Home</p>
             </div>
           </NavLink>

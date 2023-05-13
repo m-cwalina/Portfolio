@@ -2,7 +2,7 @@ import React from 'react';
 import PortfolioPic from '../../images/portfolio.jpg';
 import ConnectGolfPic from '../../images/connectgolf.jpg';
 import PfandMePic from '../../images/pfandme.jpg';
-import ChartsPic from '../../images/charts.png';
+import ChartsPic from '../../images/charts.jpg';
 import ForteFans from '../../images/fortefans.png';
 
 export default function Image(project) {

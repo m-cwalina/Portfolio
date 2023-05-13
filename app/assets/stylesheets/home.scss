@@ -8,16 +8,6 @@ a {
   justify-content: center;
 }
 
-.logo {
-  min-width: 140px;
-  max-height: 140px;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: end;
-}
-
 .links {
   display: flex;
   justify-content: space-evenly;
@@ -38,25 +28,12 @@ a {
   color: #FFFFFF;
 }
 
-// .icon-link:active {
-//   transform: scale(1.5);
-// }
-
 .navbar-text:hover {
-  color: #22d3ee;
+  color: #164e63;
 }
 
 .navbar-text {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
-}
-
-.active-link {
-  transform: scale(1.6);
-}
-
-.active-link .navbar-icon,
-.active-link .navbar-text {
-  color: #22d3ee !important;
 }

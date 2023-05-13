@@ -64,13 +64,13 @@ const ProjectDetailCard = ({project}) => (
       </CardMedia>
       <Box
         sx={{
-          backgroundColor: 'white',
+          backgroundColor: '#071008',
           boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
           borderRadius: '4px',
-          padding: 1
+          padding: 3
         }}
       >
-        <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color='#555555'>
+        <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color='#FFFFFF'>
         {project.code_snippet_text}
       </Typography>
       </Box>
