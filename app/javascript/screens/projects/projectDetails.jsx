@@ -37,9 +37,6 @@ const ProjectDetailCard = ({project}) => (
       <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px'}}>
         {project.description}
       </Typography>
-      <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
-        Languages
-      </Typography>
       <Box align='center'
            sx={{display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
