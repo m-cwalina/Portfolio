@@ -28,12 +28,18 @@ a {
   color: #FFFFFF;
 }
 
-.navbar-text:hover {
-  color: #164e63;
-}
-
 .navbar-text {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
+}
+
+.active-link .navbar-text {
+  color: #164e63;
+  font-size: 20px;
+}
+
+.active-link .navbar-icon {
+  transform: scale(2.0);
+  color: #164e63;
 }

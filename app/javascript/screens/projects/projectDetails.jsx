@@ -50,26 +50,40 @@ const ProjectDetailCard = ({project}) => (
       <Typography variant='h4' align='center' sx={{ fontWeight: 'bold' }}>
         Code
       </Typography>
-      <CardMedia
-        sx={{
-          backgroundColor: '#212020',
-          margin: '30px'
-           }}
-        src=''
-      >
-        <CodeImage image={project.code_snippet} />
-      </CardMedia>
       <Box
         sx={{
-          backgroundColor: '#071008',
+          display: 'flex',
+          backgroundColor: '#212020',
           boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
           borderRadius: '4px',
-          padding: 3
+          margin: '30px'
         }}
       >
-        <Typography variant='body1' align='justify' sx={{ fontWeight: 'bold', padding: '30px' }} color='#FFFFFF'>
-        {project.code_snippet_text}
-      </Typography>
+        <Box
+          sx={{
+            flex: '0 0 35%',
+            padding: 3
+          }}
+        >
+          <Typography variant='body1' align='justify' color='#FFFFFF'>
+            {project.code_snippet_text}
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            flex: '0 0 65%'
+          }}
+        >
+          <CardMedia
+            sx={{
+              height: '100%',
+              width: '100%'
+            }}
+            src=''
+          >
+            <CodeImage image={project.code_snippet} />
+          </CardMedia>
+        </Box>
       </Box>
       <ProjectDetailExtras project={project}/>
     </CardContent>
