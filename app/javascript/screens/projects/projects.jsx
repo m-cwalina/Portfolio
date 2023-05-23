@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import { useLoaderData, Link, Outlet } from "react-router-dom";
-import Image from './images'
+import ProjectImage from './ProjectImage'
 import { Stack, Box } from '@mui/material';
 
 export async function loader() {
@@ -62,7 +62,7 @@ const Content = ({project, isLoading}) => {
             sx={{ height: 240}}
             src=''
           >
-            <Image image={project.image} />
+            <ProjectImage project={project} />
           </CardMedia>
           <Typography variant='h3' fontWeight='bold' align='center' color="#FFFFFF" padding='16px'>
             {project.title}
