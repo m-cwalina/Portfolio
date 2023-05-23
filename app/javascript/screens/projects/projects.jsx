@@ -59,7 +59,7 @@ const Content = ({project, isLoading}) => {
         }}>
         <CardContent sx={{padding: 0}}>
           <CardMedia
-            sx={{ height: 240}}
+            sx={{ height: 240, display: 'flex', justifyContent: 'center', alignItems: 'center'}}
             src=''
           >
             <ProjectImage project={project} />
