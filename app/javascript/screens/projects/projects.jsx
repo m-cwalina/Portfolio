@@ -6,6 +6,7 @@ import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import { useLoaderData, Link, Outlet } from "react-router-dom";
 import Image from './images'
+import { Stack, Box } from '@mui/material';
 
 export async function loader() {
   const URL = `/api/v1/projects`;
@@ -33,7 +34,10 @@ const Content = ({project, isLoading}) => {
 
   if (isLoading) {
     return (
-      <Skeleton variant="rectangular" width={330} height={300} margin={15} />
+      <Stack spacing={2} justifyContent='center' alignItems='center'>
+        <Skeleton variant="rectangular" width={300} height={250} />
+        <Skeleton variant="text" width="100%" />
+      </Stack>
     )
   }
 
@@ -74,9 +78,13 @@ export default function Projects() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (projects.length > 0) {
-      setIsLoading(false);
-    }
+    const timer = setTimeout(() => {
+      if (projects.length > 0) {
+        setIsLoading(false);
+      }
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [projects]);
 
   const projectCards = projects.map((project) => (
@@ -84,13 +92,13 @@ export default function Projects() {
   ));
 
   return (
-    <>
+    <React.Fragment>
       <div className='cards-container'>
         {projectCards}
       </div>
       <div className="outlet">
         <Outlet />
       </div>
-    </>
+    </React.Fragment>
   )
 }

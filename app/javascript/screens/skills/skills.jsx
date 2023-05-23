@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Card, CardActions, CardContent, Typography, Box, Stack} from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import {useLoaderData} from "react-router-dom";
+import Skeleton from '@mui/material/Skeleton';
 import Icon from './icons';
 import { Link, Outlet } from "react-router-dom";
 
@@ -16,7 +17,7 @@ export async function loader() {
   }
 }
 
-const SkillCard = ({ skill }) => {
+const SkillCard = ({ skill, isLoading }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -26,6 +27,14 @@ const SkillCard = ({ skill }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
+  if (isLoading) {
+    return (
+      <Stack spacing={2} justifyContent='center' alignItems='center'>
+        <Skeleton variant="rectangular" width={300} height={250} />
+      </Stack>
+    )
+  }
 
   return (
     <Card
@@ -68,12 +77,21 @@ const SkillCard = ({ skill }) => {
 
 export default function Skills() {
   const skills = useLoaderData();
+  const [isLoading, setIsLoading] = useState(true);
 
   const skillList = skills.map((skill) => (
     <Link to={`${skill.id}`}>
-      <SkillCard key={skill.id} skill={skill}  />
+      <SkillCard key={skill.id} skill={skill} isLoading={isLoading} />
     </Link>
   ));
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timer);
+  }, [skills])
 
   return (
     <React.Fragment>
