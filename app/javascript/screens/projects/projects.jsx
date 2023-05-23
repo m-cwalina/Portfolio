@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import { useLoaderData, Link, Outlet } from "react-router-dom";
 import Image from './images'
@@ -19,8 +18,9 @@ export async function loader() {
   }
 }
 
-const Content = ({project}) => {
+const Content = ({project, isLoading}) => {
   const [isHovered, setIsHovered] = useState(false);
+
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -29,6 +29,14 @@ const Content = ({project}) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
+
+  if (isLoading) {
+    return (
+      <Skeleton variant="rectangular" width={330} height={300} margin={15} />
+    )
+  }
+
 
   return (
     <Link to={`${project.id}`}>
@@ -50,7 +58,7 @@ const Content = ({project}) => {
             sx={{ height: 240}}
             src=''
           >
-            <Image image={project.image}/>
+            <Image image={project.image} />
           </CardMedia>
           <Typography variant='h3' fontWeight='bold' align='center' color="#FFFFFF" padding='16px'>
             {project.title}
@@ -63,9 +71,16 @@ const Content = ({project}) => {
 
 export default function Projects() {
   const projects = useLoaderData();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (projects.length > 0) {
+      setIsLoading(false);
+    }
+  }, [projects]);
 
   const projectCards = projects.map((project) => (
-    <Content project={project} key={project.id} />
+    <Content project={project} key={project.id} isLoading={isLoading} />
   ));
 
   return (
