@@ -5,6 +5,7 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import TimelapseIcon from '@mui/icons-material/Timelapse';
 import ProjectImage from '../projects/ProjectImage';
 import { Link } from "react-router-dom";
+import ProjectsShowChart from './projectsShowChart';
 
 export default function ProjectsShow({projects}) {
 
@@ -49,37 +50,43 @@ export default function ProjectsShow({projects}) {
               </Typography>
             </Box>
           </Box>
+          <Box display='flex' justifyContent='space-between'>
+            <Box display='flex' flexDirection='column' width='90px'>
+              <Box
+                display='flex'
+                justifyContent='left'
+                alignItems='center'
+                width='90px'
+                marginTop='5px'>
+                <StarOutlineIcon fontSize='12px' sx={{ color: '#64748b', marginRight: '3px' }} />
+                <Typography
+                  variant='body'
+                  align='center'
+                  color="#64748b">
+                  {project.rank}
+                </Typography>
+              </Box>
 
-          <Box
-            display='flex'
-            justifyContent='left'
-            alignItems='center'
-            width='90px'
-            marginTop='5px'>
-            <StarOutlineIcon fontSize='12px' sx={{ color: '#64748b', marginRight: '3px' }} />
-            <Typography
-              variant='body'
-              align='center'
-              color="#64748b">
-              {project.rank}
-            </Typography>
+              <Box
+                display='flex'
+                justifyContent='left'
+                alignItems='center'
+                width='90px'
+                marginTop='5px'>
+                <TimelapseIcon fontSize='10px' sx={{ color: '#64748b', marginRight: '3px' }} />
+                <Typography
+                  variant='body'
+                  align='center'
+                  color="#64748b">
+                  {project.duration}
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box>
+              <ProjectsShowChart project={project} />
+            </Box>
           </Box>
-
-          <Box
-            display='flex'
-            justifyContent='left'
-            alignItems='center'
-            width='90px'
-            marginTop='5px'>
-            <TimelapseIcon fontSize='10px' sx={{ color: '#64748b', marginRight: '3px' }} />
-            <Typography
-              variant='body'
-              align='center'
-              color="#64748b">
-              {project.duration}
-            </Typography>
-          </Box>
-
         </CardContent>
       </Card>
     )
