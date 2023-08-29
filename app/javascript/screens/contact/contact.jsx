@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <Box>
       <Box sx={{
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: '#1e293b',
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
         backdropFilter: 'blur(10px)',
         borderRadius: 10,
@@ -39,26 +39,26 @@ export default function Contact() {
         padding: 5
         }}
       >
-        <Typography variant='h2' align='center' fontWeight='bold' color="#0c4a6e" gutterBottom>Contact</Typography>
+        <Typography variant='h2' align='center' fontWeight='bold' color="#94a3b8" gutterBottom>Contact</Typography>
         <Stack direction="row">
           <Box width='50%'>
             <Stack justifyContent='center' alignItems='flex-start'>
               <Stack direction='row' justifyContent='center' alignItems='flex-start'>
                 <MailOutlineIcon className='interests-icon' />
-                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">MatthewCwalina@gmail.com</Typography>
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#cbd5e1">MatthewCwalina@gmail.com</Typography>
               </Stack>
               <Stack direction='row' justifyContent='center' alignItems='flex-start'>
                 <PhoneIphoneIcon className='interests-icon' />
-                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">(+49) 177-3168291</Typography>
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#cbd5e1">(+49) 177-3168291</Typography>
               </Stack>
               <Stack direction='row' justifyContent='center' alignItems='center'>
                 <PhoneIphoneIcon className='interests-icon' />
-                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#FFFFFF">(+1) 619-9285218</Typography>
+                <Typography variant='h6' align='right' sx={{ fontWeight: 'bold' }} color="#cbd5e1">(+1) 619-9285218</Typography>
               </Stack>
             </Stack>
           </Box>
           <Box width='50%'>
-            <Typography variant='h6' align='left' fontWeight='bold' color="#FFFFFF">
+            <Typography variant='h6' align='left' fontWeight='bold' color="#cbd5e1">
               For any business or job opportunities please feel free to text, email or DM me through LinkedIn.
             </Typography>
           </Box>

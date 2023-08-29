@@ -45,10 +45,12 @@ const SkillCard = ({ skill, isLoading }) => {
         maxWidth: 330,
         minWidth: 300,
         margin: '15px',
-        backgroundColor: 'transparent',
+        backgroundColor: '#1e293b',
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
         transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         transition: 'transform 0.3s ease-out',
+        borderWidth: 1,
+        borderColor: '#f1f5f9'
       }}>
       <CardContent sx={{margin: 5}}>
         <Stack direction="column" spacing={1} justifyContent="center" alignItems="center">
@@ -60,7 +62,7 @@ const SkillCard = ({ skill, isLoading }) => {
             variant="h6"
             component="div"
             sx={{
-              color: '#FFFFFF',
+              color: '#cbd5e1',
               fontFamily: "'Roboto', sans- serif"
             }}
           >

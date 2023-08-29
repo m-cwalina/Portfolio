@@ -1,12 +1,11 @@
 import React from "react";
-import Logo from './logo.png'
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
 import CodeIcon from '@mui/icons-material/Code';
 import { useLocation, Outlet, NavLink } from "react-router-dom";
-import { Stack, Box } from '@mui/material';
+import { Stack } from '@mui/material';
 
 export default function Home() {
   const location = useLocation();
@@ -62,7 +61,7 @@ export default function Home() {
           </NavLink>
         </Stack>
       </div>
-      <div className="container"><Outlet/></div>
+      <div><Outlet/></div>
     </div>
   )
 }

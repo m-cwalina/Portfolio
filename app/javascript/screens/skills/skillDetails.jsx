@@ -31,7 +31,7 @@ const DetailedCard = ({skill}) => {
         maxWidth: 900,
         minWidth: 800,
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
       }}>
       <CardActions sx={{ display: 'flex', justifyContent: 'left' }}>
         <Link to={'/skills'}><KeyboardDoubleArrowLeftIcon className='arrow-icon' /></Link>
@@ -41,7 +41,7 @@ const DetailedCard = ({skill}) => {
           <Box style={{ boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)', width: '50px', borderRadius: '15px' }}>
             <Icon icon={skill.icon} />
           </Box>
-          <Typography variant="h3" component="div" sx={{ color: '#0c4a6e', fontFamily: "'Roboto', sans- serif", fontWeight: 'bold' }} align='center'>
+          <Typography variant="h3" component="div" sx={{ color: '#e2e8f0', fontFamily: "'Roboto', sans- serif", fontWeight: 'bold' }} align='center'>
             {skill.title}
           </Typography>
           <Typography sx={{ width: '80%' }}>

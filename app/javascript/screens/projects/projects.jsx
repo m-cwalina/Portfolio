@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import { useLoaderData, Link, Outlet } from "react-router-dom";
-import ProjectImage from './ProjectImage'
+import ProjectImage from './ProjectImage';
 import { Stack, Box } from '@mui/material';
 
 export async function loader() {
@@ -21,7 +21,6 @@ export async function loader() {
 
 const Content = ({project, isLoading}) => {
   const [isHovered, setIsHovered] = useState(false);
-
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -52,7 +51,7 @@ const Content = ({project, isLoading}) => {
           maxWidth: 330,
           minWidth: 300,
           margin: '15px',
-          backgroundColor: 'transparent',
+          backgroundColor: '#1e293b',
           boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
           transition: 'transform 0.3s ease-out',
@@ -64,7 +63,7 @@ const Content = ({project, isLoading}) => {
           >
             <ProjectImage project={project} />
           </CardMedia>
-          <Typography variant='h3' fontWeight='bold' align='center' color="#FFFFFF" padding='16px'>
+          <Typography variant='h3' fontWeight='bold' align='center' color="#e2e8f0" padding='16px'>
             {project.title}
           </Typography>
         </CardContent>

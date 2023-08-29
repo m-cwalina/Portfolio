@@ -25,21 +25,21 @@ a {
 .navbar-icon {
   transform: scale(1.4);
   margin: 7px;
-  color: #FFFFFF;
+  color: #f1f5f9;
 }
 
 .navbar-text {
-  color: #FFFFFF;
+  color: #f1f5f9;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .active-link .navbar-text {
-  color: #164e63;
-  font-size: 20px;
+  color: #cbd5e1;
+  font-size: 15px;
 }
 
 .active-link .navbar-icon {
   transform: scale(2.0);
-  color: #164e63;
+  color: #cbd5e1;
 }

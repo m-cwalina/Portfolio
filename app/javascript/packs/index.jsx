@@ -1,29 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import Home from '../screens/home/home';
-
 import About from '../screens/about/about';
-
 import Skills, {loader as skillsLoader} from '../screens/skills/skills';
 import SkillDetails, {loader as skillDetailsLoader} from '../screens/skills/skillDetails';
-
 import Contact from '../screens/contact/contact';
-
 import Projects, {loader as projectsLoader} from '../screens/projects/projects';
 import ProjectDetails, {loader as projectDetailsLoader} from '../screens/projects/projectDetails';
-
-import Banner from '../components/banner/banner'
-
-
+import HomePageContent, { loader as projectsShowLoader } from '../screens/home/homePageContent';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
     children: [
-      { index: true, element: <Banner /> },
+      { index: true,
+        element: <HomePageContent />,
+        loader: projectsShowLoader,
+      },
       {
         path: "/about",
         element: <About />

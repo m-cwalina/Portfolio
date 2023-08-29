@@ -21,6 +21,7 @@
 @import 'projects';
 @import 'skills';
 @import 'contact';
+@import 'font_color';
 
 //  html, body {
 //   font-family: 'Roboto', sans-serif;
@@ -33,12 +34,12 @@
 
 html, body {
   font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  color: '#87AEDF';
   min-height: 100%;
 }
 
 #content-wrapper {
-  background-image: linear-gradient(to bottom, #C193C5, #7BC6CC);
+  background-image: linear-gradient(to right, #0f172a, #0f172a);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
