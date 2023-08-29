@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Skill.destroy_all
-Project.destroy_all
 ProjectSkill.destroy_all
+Project.destroy_all
+Skill.destroy_all
 
 Skill.create([
   {icon: 'JS', title: 'Javascript (ES6)', strength: 90, year: '2.5'},
@@ -29,14 +29,17 @@ Skill.create([
   {icon: 'MUI', title: 'Material-UI', strength: 75, year: '.5'},
 ])
 
-fortefans = Project.create(
+Project.create(
   title: 'ForteFans',
   image: 'ForteFans',
+  rank: '1st',
+  duration: '1 year',
   link: '',
   username: '',
   password: '',
   git: '',
   description: 'A mobile based application for sharing and tracking links across multiple platforms.',
+  short_description: 'Share music with your followers',
   learn: 'Share your music across Social Media platforms',
   code_snippet: 'ForteFans',
   code_snippet_text: 'I have created a Spotify controller that has a couple of methods to connect a user to their Spotify account.
@@ -46,13 +49,16 @@ fortefans = Project.create(
                       and handle errors so that Redux can handle the state incase of of errors returned from the service object.'
 )
 
-connectgolf = Project.create(
+Project.create(
   title: 'ConnectGolf',
   image: 'ConnectGolf',
+  rank: '2nd',
+  duration: '3 months',
   link: 'https://connectgolf.herokuapp.com',
   username: '1@gmail.com',
   password: 'password',
   git: 'https://github.com/m-cwalina/ConnectGolf',
+  short_description: 'Connect with your golf members',
   description: 'A web application to connect golfers with their club and other members.
                 Also provided is an Admin DashBoard for a booking system and club statistics.',
   learn: 'This project brought together React.js with React-Router to build a SPA appliaction.
@@ -66,13 +72,16 @@ connectgolf = Project.create(
                       all users that have no friendship relation. In short, all users that aren't current friends."
 )
 
-pfandme = Project.create(
+Project.create(
   title: 'PfandMe2.0',
   image: 'PfandMe',
+  rank: '3rd',
+  duration: '2 weeks',
   link: 'https://pfandme2.herokuapp.com',
   username: '1@gmail.com',
   password: 'password',
   git: 'https://github.com/m-cwalina/PfandMe2.0',
+  short_description: 'Recycle your bottles done easy',
   description: 'This mobile first application connects a user and PfandMe employee to pick up their recycling at home.
                 The Apps user flow starts by a request for your bottles to be retrieved at home and automatically
                 being connected with a PfandMe employee to pick them up.',
@@ -86,15 +95,18 @@ pfandme = Project.create(
                       I save the appointment and redirect to the appointment show page.'
 )
 
-charts = Project.create(
+Project.create(
   title: 'Chart UI',
   image: 'Charts',
+  duration: '3 days',
   link: 'https://codesandbox.io/s/chart-ui-y5pekr',
+  rank: '4th',
   username: '',
   password: '',
   git: '',
   description: 'This application was created with codesandbox. It showcases sales representatives and their numbers.
                 Each table row has more detailed information with chart visualizations.',
+  short_description: 'Charts for data visualization',
   learn: 'Charts for data UI visualization',
   code_snippet: 'Charts',
   code_snippet_text: 'This piece of code uses Chart.js to build a detailed chart. The chart takes option labels to
@@ -104,13 +116,16 @@ charts = Project.create(
                       passed down as an object to Line (provided by Chart.js) in the return function.'
 )
 
-portfolio = Project.create(
+Project.create(
   title: 'Portfolio',
   image: 'Portfolio',
+  rank: '5th',
+  duration: 'ongoing',
   link: '',
   username: '',
   password: '',
   git: 'https://github.com/m-cwalina/Portfolio',
+  short_description: 'All projects and skills',
   description: 'The portfolio showecases most of my previous work and myself.',
   learn: 'My previous work',
   code_snippet: 'Portfolio',
@@ -119,24 +134,20 @@ portfolio = Project.create(
                       function called skillList. I then use skillList to display all skills in the render component.'
 )
 
-ProjectSkill.create([
-  {project_id: fortefans.id, skill_id: 1}, {project_id: fortefans.id, skill_id: 2}, {project_id: fortefans.id, skill_id: 3},
-  {project_id: fortefans.id, skill_id: 6}, {project_id: fortefans.id, skill_id: 7}, {project_id: fortefans.id, skill_id: 9},
-  {project_id: fortefans.id, skill_id: 10}, {project_id: fortefans.id, skill_id: 13}, {project_id: fortefans.id, skill_id: 14},
+project_skills_map = {
+  'ForteFans' => ['Javascript (ES6)', 'Ruby', 'Ruby on Rails', 'Redux', 'React Native', 'PostgreSQL', 'HTML/SCSS', 'Git', 'Github'],
+  'ConnectGolf' => ['Javascript (ES6)', 'Ruby', 'Ruby on Rails', 'React.js', 'React-Router', 'PostgreSQL', 'HTML/SCSS', 'Heroku', 'Git', 'Github', 'Bootstrap'],
+  'PfandMe2.0' => ['Javascript (ES6)', 'Ruby', 'Ruby on Rails', 'PostgreSQL', 'HTML/SCSS', 'Heroku', 'Git', 'Github', 'Bootstrap'],
+  'Portfolio' => ['Javascript (ES6)', 'Ruby', 'Ruby on Rails', 'React.js', 'React-Router', 'PostgreSQL', 'HTML/SCSS', 'Heroku', 'Git', 'Github', 'Bootstrap'],
+  'Chart UI' => ['Javascript (ES6)', 'React.js', 'React-Router', 'HTML/SCSS']
+}
 
-  {project_id: connectgolf.id, skill_id: 1}, {project_id: connectgolf.id, skill_id: 2}, {project_id: connectgolf.id, skill_id: 3},
-  {project_id: connectgolf.id, skill_id: 4}, {project_id: connectgolf.id, skill_id: 5}, {project_id: connectgolf.id, skill_id: 9},
-  {project_id: connectgolf.id, skill_id: 10}, {project_id: connectgolf.id, skill_id: 12}, {project_id: connectgolf.id, skill_id: 13},
-  {project_id: connectgolf.id, skill_id: 14}, {project_id: connectgolf.id, skill_id: 16},
+# Step 2: Iterate and create the ProjectSkill instances
 
-  {project_id: pfandme.id, skill_id: 1}, {project_id: pfandme.id, skill_id: 2}, {project_id: pfandme.id, skill_id: 3},
-  {project_id: pfandme.id, skill_id: 9}, {project_id: pfandme.id, skill_id: 10}, {project_id: pfandme.id, skill_id: 12},
-  {project_id: pfandme.id, skill_id: 13}, {project_id: pfandme.id, skill_id: 14}, {project_id: pfandme.id, skill_id: 16},
-
-  {project_id: portfolio.id, skill_id: 1}, {project_id: portfolio.id, skill_id: 2}, {project_id: portfolio.id, skill_id: 3},
-  {project_id: portfolio.id, skill_id: 4}, {project_id: portfolio.id, skill_id: 5}, {project_id: portfolio.id, skill_id: 9},
-  {project_id: portfolio.id, skill_id: 10}, {project_id: portfolio.id, skill_id: 12},{project_id: portfolio.id, skill_id: 13},
-  {project_id: portfolio.id, skill_id: 14}, {project_id: portfolio.id, skill_id: 16},
-
-  {project_id: charts.id, skill_id: 1}, {project_id: charts.id, skill_id: 4}, {project_id: charts.id, skill_id: 5}, {project_id: charts.id, skill_id: 10}
-])
+project_skills_map.each do |project_title, skills|
+  project = Project.find_by(title: project_title)  # Assuming title is unique
+  skills.each do |skill_title|
+    skill = Skill.find_by(title: skill_title)
+    ProjectSkill.create(project: project, skill: skill) unless ProjectSkill.exists?(project: project, skill: skill)
+  end
+end

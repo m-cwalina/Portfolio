@@ -1,5 +1,4 @@
 class Api::V1::ProjectsController < ApplicationController
-
   def index
     @projects = Project.all
   end
@@ -7,5 +6,4 @@ class Api::V1::ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
   end
-
 end
