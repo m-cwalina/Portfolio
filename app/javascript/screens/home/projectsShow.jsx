@@ -26,9 +26,9 @@ export default function ProjectsShow({projects}) {
         Projects
       </Typography>
 
-      <div className='cards-container'>
+      <Box display='flex'>
         {projectCards}
-      </div>
+      </Box>
 
 
       <Typography
