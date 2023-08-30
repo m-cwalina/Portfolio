@@ -26,7 +26,7 @@ export default function ProjectsShow({projects}) {
         Projects
       </Typography>
 
-      <Box display='flex'>
+      <Box display='flex' justifyContent='center'>
         {projectCards}
       </Box>
 
