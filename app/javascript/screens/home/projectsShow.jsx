@@ -26,10 +26,9 @@ export default function ProjectsShow({projects}) {
         Projects
       </Typography>
 
-      <Box display='flex' justifyContent='center'>
+      <div className='cards-container'>
         {projectCards}
-      </Box>
-
+      </div>
 
       <Typography
         component='div'
@@ -50,11 +49,11 @@ export default function ProjectsShow({projects}) {
           alignItems='center'
           justifyContent='center'>
           <Typography
-            sx={{ color: '#cbd5e1', fontWeight: 'bold' }}
+            sx={{ color: '#ff8c00', fontWeight: 'bold' }}
             variant='h4'>
             Learn More
           </Typography>
-          <ArrowForwardIosOutlinedIcon fontSize='large' sx={{color: '#cbd5e1'}} />
+          <ArrowForwardIosOutlinedIcon fontSize='large' sx={{ color: '#ff8c00' }} />
         </Box>
       </Link>
 

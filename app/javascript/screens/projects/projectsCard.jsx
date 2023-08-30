@@ -36,9 +36,8 @@ export default function ProjectsCard({ project, isLoading }) {
         onMouseLeave={handleMouseLeave}
         variant="outlined"
         sx={{
-          maxWidth: 330,
-          minWidth: 300,
-          margin: '15px',
+          maxWidth: '430px',
+          minWidth: '430px',
           backgroundColor: '#1e293b',
           boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
@@ -51,7 +50,7 @@ export default function ProjectsCard({ project, isLoading }) {
             display='flex'
             alignItems='center'
             justifyContent='left'>
-            <Box marginRight='8px' sx={{ height: '90px', width: '90px' }}>
+            <Box marginRight='8px' sx={{ height: '120px', width: '120px' }}>
               <ProjectImage project={project} />
             </Box>
             <Box
@@ -60,14 +59,14 @@ export default function ProjectsCard({ project, isLoading }) {
               alignItems='left'
               flexDirection='column'>
               <Typography
-                variant='h4'
+                variant='h3'
                 fontWeight='bold'
                 align='left'
                 color="#cbd5e1">
                 {project.title}
               </Typography>
               <Typography
-                variant='body'
+                variant='h6'
                 align='left'
                 color="#94a3b8">
                 {project.short_description}
@@ -76,17 +75,18 @@ export default function ProjectsCard({ project, isLoading }) {
           </Box>
 
           <Box display='flex' justifyContent='space-between'>
-            <Box display='flex' flexDirection='column' width='90px' justifyContent='center'>
+            <Box display='flex' flexDirection='column' width='120px' justifyContent='center'>
               <Box
                 display='flex'
                 justifyContent='left'
                 alignItems='center'
-                width='90px'
+                width='120px'
                 marginTop='5px'>
                 <StarOutlineIcon fontSize='12px' sx={{ color: '#64748b', marginRight: '3px' }} />
                 <Typography
                   variant='body'
                   align='center'
+                  fontSize='20px'
                   color="#64748b">
                   {project.rank}
                 </Typography>
@@ -96,12 +96,13 @@ export default function ProjectsCard({ project, isLoading }) {
                 display='flex'
                 justifyContent='left'
                 alignItems='center'
-                width='90px'
+                width='120px'
                 marginTop='5px'>
                 <TimelapseIcon fontSize='10px' sx={{ color: '#64748b', marginRight: '3px' }} />
                 <Typography
                   variant='body'
                   align='center'
+                  fontSize='20px'
                   color="#64748b">
                   {project.duration}
                 </Typography>
@@ -111,19 +112,20 @@ export default function ProjectsCard({ project, isLoading }) {
                 display='flex'
                 justifyContent='left'
                 alignItems='center'
-                width='90px'
+                width='120px'
                 marginTop='5px'>
                 <AlignVerticalBottomIcon fontSize='10px' sx={{ color: '#64748b', marginRight: '3px' }} />
                 <Typography
                   variant='body'
                   align='center'
+                  fontSize='20px'
                   color="#64748b">
                   {project.difficulty}
                 </Typography>
               </Box>
             </Box>
 
-            <Box sx={{ width: '220px' }}>
+            <Box sx={{ width: '300px' }}>
               <ProjectsChart project={project} />
             </Box>
           </Box>

@@ -37,7 +37,7 @@ export default function ProjectShowChart ({project}) {
         label: 'Strength',
         data: [0, ...project.languages.slice(2, 6).map(language => language.strength), 0],
         backgroundColor: 'rgba(148, 163, 184, 0.6)',
-        borderColor: '#94a3b8',
+        borderColor: '#ff8c00',
         tension: 0.4,
         pointRadius: 3,
         pointBackgroundColor: '#f1f5f9',

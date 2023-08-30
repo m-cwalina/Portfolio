@@ -1,14 +1,14 @@
 .images {
   object-fit: cover;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
 }
 
 .imageWrapper {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
 }
 
@@ -20,17 +20,17 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  /* semi-transparent black */
   border-radius: 10px;
 }
 
 .cards-container {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   grid-auto-rows: auto;
   grid-gap: 1rem;
   justify-content: center;
+  margin: auto;
 }
 
 .code-images {

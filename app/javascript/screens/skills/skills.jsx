@@ -42,8 +42,8 @@ const SkillCard = ({ skill, isLoading }) => {
       onMouseLeave={handleMouseLeave}
       variant="outlined"
       sx={{
-        maxWidth: 330,
-        minWidth: 300,
+        maxWidth: '330px',
+        minWidth: '300px',
         margin: '15px',
         backgroundColor: '#1e293b',
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',

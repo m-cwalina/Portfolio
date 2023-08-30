@@ -143,11 +143,11 @@ export default function Chart() {
           alignItems='center'
           justifyContent='right'>
           <Typography
-            sx={{ color: '#cbd5e1', fontWeight: 'bold' }}
+            sx={{ color: '#ff8c00', fontWeight: 'bold' }}
             variant='h4'>
             Learn More
           </Typography>
-          <ArrowForwardIosOutlinedIcon fontSize='large' sx={{ color: '#cbd5e1' }} />
+          <ArrowForwardIosOutlinedIcon fontSize='large' sx={{ color: '#ff8c00' }} />
         </Box>
       </Link>
     </React.Fragment>
