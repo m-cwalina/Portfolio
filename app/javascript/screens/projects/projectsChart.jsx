@@ -27,7 +27,7 @@ ChartJS.register(
   BarElement
 );
 
-export default function ProjectShowChart ({project}) {
+export default function ProjectsChart({ project }) {
 
   const barData = {
     labels: ['', ...project.languages.slice(2, 6).map(language => language.title), ''],

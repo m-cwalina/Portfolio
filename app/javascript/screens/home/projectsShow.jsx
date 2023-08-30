@@ -1,99 +1,13 @@
 import React from 'react';
-import { Typography, Box, Card, CardContent} from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import TimelapseIcon from '@mui/icons-material/Timelapse';
-import ProjectImage from '../projects/ProjectImage';
 import { Link } from "react-router-dom";
-import ProjectsShowChart from './projectsShowChart';
+import ProjectsShowCard from './projectsShowCard';
 
 export default function ProjectsShow({projects}) {
 
-  const ProjectCard = ({ project }) => {
-    return (
-      <Card
-        variant="outlined"
-        sx={{
-          padding: '2px',
-          minWidth: 330,
-          margin: '15px',
-          backgroundColor: '#1e293b',
-          borderWidth: '1px',
-          borderColor: '#e2e8f0',
-          boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
-        }}>
-        <CardContent>
-          <Box
-            display='flex'
-            alignItems='center'
-            justifyContent='left'>
-            <Box marginRight='8px' sx={{height: '90px', width: '90px'}}>
-              <ProjectImage project={project} />
-            </Box>
-            <Box
-              display='flex'
-              justifyContent='left'
-              alignItems='left'
-              flexDirection='column'>
-              <Typography
-                variant='h4'
-                fontWeight='bold'
-                align='left'
-                color="#cbd5e1">
-                {project.title}
-              </Typography>
-              <Typography
-                variant='body'
-                align='left'
-                color="#94a3b8">
-                {project.short_description}
-              </Typography>
-            </Box>
-          </Box>
-          <Box display='flex' justifyContent='space-between'>
-            <Box display='flex' flexDirection='column' width='90px'>
-              <Box
-                display='flex'
-                justifyContent='left'
-                alignItems='center'
-                width='90px'
-                marginTop='5px'>
-                <StarOutlineIcon fontSize='12px' sx={{ color: '#64748b', marginRight: '3px' }} />
-                <Typography
-                  variant='body'
-                  align='center'
-                  color="#64748b">
-                  {project.rank}
-                </Typography>
-              </Box>
-
-              <Box
-                display='flex'
-                justifyContent='left'
-                alignItems='center'
-                width='90px'
-                marginTop='5px'>
-                <TimelapseIcon fontSize='10px' sx={{ color: '#64748b', marginRight: '3px' }} />
-                <Typography
-                  variant='body'
-                  align='center'
-                  color="#64748b">
-                  {project.duration}
-                </Typography>
-              </Box>
-            </Box>
-
-            <Box>
-              <ProjectsShowChart project={project} />
-            </Box>
-          </Box>
-        </CardContent>
-      </Card>
-    )
-  }
-
   const projectCards = projects.map((project) => (
-    <ProjectCard project={project} key={project.id}/>
+    <ProjectsShowCard project={project} key={project.id}/>
   ));
 
   return (
@@ -112,9 +26,9 @@ export default function ProjectsShow({projects}) {
         Projects
       </Typography>
 
-      <Box display='flex'>
+      <div className='cards-container'>
         {projectCards}
-      </Box>
+      </div>
 
 
       <Typography

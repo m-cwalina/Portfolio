@@ -33,7 +33,10 @@ export default function ProjectImage({ project }) {
       {isLoading ? (
         <CircularProgress size={100} style={{ color: '#164e63' }} />
       ) : (
-        <img src={getImageSrc(project.image)} className='images' alt={project.image} />
+        <div className="imageWrapper">
+          <img src={getImageSrc(project.image)} className="images" alt={project.image} />
+          <div className="overlay"></div>
+        </div>
       )}
     </>
   );

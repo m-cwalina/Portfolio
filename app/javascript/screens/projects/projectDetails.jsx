@@ -6,6 +6,7 @@ import CodeImage from './codeImage';
 import Icon from '../skills/icons';
 import ProjectIcon from '../../icons/project.png';
 import GitHubLinkIcon from '../../icons/gitlink.png';
+import ProjectDetailChart from './projectDetailChart';
 
 export async function loader({ params }) {
   const URL = `/api/v1/projects/${params.projectId}`;
@@ -37,6 +38,11 @@ const ProjectDetailCard = ({project}) => (
       <Typography variant='body1' align='center' sx={{ fontWeight: 'bold', padding: '30px'}}>
         {project.description}
       </Typography>
+
+      <Box>
+        <ProjectDetailChart project={project} />
+      </Box>
+
       <Box align='center'
            sx={{display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',

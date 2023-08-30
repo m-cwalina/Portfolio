@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { useLoaderData, Link, Outlet } from "react-router-dom";
 import ProjectImage from './ProjectImage';
 import { Stack, Box } from '@mui/material';
+import ProjectCard from './projectsCard';
 
 export async function loader() {
   const URL = `/api/v1/projects`;
@@ -19,58 +20,58 @@ export async function loader() {
   }
 }
 
-const Content = ({project, isLoading}) => {
-  const [isHovered, setIsHovered] = useState(false);
+// const Content = ({project, isLoading}) => {
+//   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+//   const handleMouseEnter = () => {
+//     setIsHovered(true);
+//   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-
-  if (isLoading) {
-    return (
-      <Stack spacing={2} justifyContent='center' alignItems='center'>
-        <Skeleton variant="rectangular" width={300} height={250} />
-        <Skeleton variant="text" width="100%" />
-      </Stack>
-    )
-  }
+//   const handleMouseLeave = () => {
+//     setIsHovered(false);
+//   };
 
 
-  return (
-    <Link to={`${project.id}`}>
-      <Card
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        variant="outlined"
-        sx={{
-          maxWidth: 330,
-          minWidth: 300,
-          margin: '15px',
-          backgroundColor: '#1e293b',
-          boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-          transition: 'transform 0.3s ease-out',
-        }}>
-        <CardContent sx={{padding: 0}}>
-          <CardMedia
-            sx={{ height: 240, display: 'flex', justifyContent: 'center', alignItems: 'center'}}
-            src=''
-          >
-            <ProjectImage project={project} />
-          </CardMedia>
-          <Typography variant='h3' fontWeight='bold' align='center' color="#e2e8f0" padding='16px'>
-            {project.title}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Link>
-  )
-}
+//   if (isLoading) {
+//     return (
+//       <Stack spacing={2} justifyContent='center' alignItems='center'>
+//         <Skeleton variant="rectangular" width={300} height={250} />
+//         <Skeleton variant="text" width="100%" />
+//       </Stack>
+//     )
+//   }
+
+
+//   return (
+//     <Link to={`${project.id}`}>
+//       <Card
+//         onMouseEnter={handleMouseEnter}
+//         onMouseLeave={handleMouseLeave}
+//         variant="outlined"
+//         sx={{
+//           maxWidth: 330,
+//           minWidth: 300,
+//           margin: '15px',
+//           backgroundColor: '#1e293b',
+//           boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+//           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+//           transition: 'transform 0.3s ease-out',
+//         }}>
+//         <CardContent sx={{padding: 0}}>
+//           <CardMedia
+//             sx={{ height: 240, display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+//             src=''
+//           >
+//             <ProjectImage project={project} />
+//           </CardMedia>
+//           <Typography variant='h3' fontWeight='bold' align='center' color="#e2e8f0" padding='16px'>
+//             {project.title}
+//           </Typography>
+//         </CardContent>
+//       </Card>
+//     </Link>
+//   )
+// }
 
 export default function Projects() {
   const projects = useLoaderData();
@@ -87,7 +88,7 @@ export default function Projects() {
   }, [projects]);
 
   const projectCards = projects.map((project) => (
-    <Content project={project} key={project.id} isLoading={isLoading} />
+    <ProjectCard project={project} key={project.id} isLoading={isLoading} />
   ));
 
   return (
