@@ -30,17 +30,23 @@ export default function ProjectsShow({projects}) {
         {projectCards}
       </div>
 
-      <Typography
-        component='div'
-        align='justify'
-        variant='h6'
-        marginTop='75px'
-        sx={{ fontFamily: "'Roboto', sans-serif",
-              fontWeight: 300,
-              width: '65%',
-              color: '#e2e8f0'}}>
-        I love to develop across the stack. My strongest skills being developing RESTful APIs in Ruby/Rails, building out a UI/UX in React and harnessing Redux for state managment. I develop scalable API endpoints using ActiveRecord for best possible O(n) queries, models to handle business logic, Service Objects for external API calls and validations to secure incoming data. To build beautiful UIs I use React to develop resuable components and Redux/Toolkit to move state logic out of my components, Thunks for Async API requests, and to update my state tree for less API calls.
-      </Typography>
+        <Typography
+          component='div'
+          align='justify'
+          variant='h6'
+          sx={{
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: 350,
+            width: '650px',
+            color: '#e2e8f0',
+            marginTop: '75px'
+          }}
+        >
+          <span style={{ fontSize: '1.9em', color: '#ff8c00', fontWeight: 'bold' }}>
+            I love to develop across the stack.
+          </span>
+          I build RESTful APIs using OOP, construct an UI/UX in React.js and harness Redux for state management. I develop scalable API endpoints using the best possible O(n) queries, models to handle business logic, Service Objects for external API calls and validations to secure incoming data. To develop beautiful UIs I use React.js to develop reusable components and Redux/Toolkit to move state logic out of my components, Thunks for Async API requests, and to update my state tree for an efficient frontend.
+        </Typography>
 
       <Link to='/projects'>
         <Box

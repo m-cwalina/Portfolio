@@ -3,6 +3,7 @@ import Chart from './chart';
 import TypeWriterEffect from './typeWriterEffect';
 import ProjectsShow from './projectsShow';
 import { useLoaderData } from "react-router-dom";
+import { Box } from '@mui/material';
 
 export async function loader() {
   const URL = `/api/v1/projects`;
@@ -21,7 +22,9 @@ export default function HomePageContent() {
   return (
     <React.Fragment>
       <TypeWriterEffect />
-      <Chart />
+      <Box sx={{padding: '20px'}}>
+        <Chart />
+      </Box>
       <ProjectsShow projects={projects} />
     </React.Fragment>
   )
