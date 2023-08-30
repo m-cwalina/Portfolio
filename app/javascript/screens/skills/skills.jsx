@@ -97,7 +97,7 @@ export default function Skills() {
 
   return (
     <React.Fragment>
-      <div className="card-container">
+      <div className="skills-card-container">
         {skillList}
       </div>
       <div className="outlet">
