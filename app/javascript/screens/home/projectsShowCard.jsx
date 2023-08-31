@@ -4,7 +4,7 @@ import AlignVerticalBottomIcon from '@mui/icons-material/AlignVerticalBottom';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import TimelapseIcon from '@mui/icons-material/Timelapse';
 import ProjectImage from '../projects/ProjectImage';
-import { Typography, Box, Card, CardContent } from '@mui/material';
+import { Typography, Box, Card, CardContent, autocompleteClasses } from '@mui/material';
 
 export default function ProjectsShowCard({project}) {
   return (
@@ -13,11 +13,11 @@ export default function ProjectsShowCard({project}) {
       sx={{
         minWidth: '430px',
         maxWidth: '430px',
-
         backgroundColor: '#1e293b',
         borderWidth: '1px',
         borderColor: '#e2e8f0',
         boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
+        margin: 'auto'
       }}>
 
       <CardContent sx={{ padding: '5px' }}>
@@ -42,9 +42,10 @@ export default function ProjectsShowCard({project}) {
               {project.title}
             </Typography>
             <Typography
-              variant='h6'
+              fontSize='20px'
+              variant='body'
               align='left'
-              color="#94a3b8">
+              color='#64748b'>
               {project.short_description}
             </Typography>
           </Box>
@@ -58,7 +59,7 @@ export default function ProjectsShowCard({project}) {
               alignItems='center'
               width='120px'
               marginTop='5px'>
-              <StarOutlineIcon fontSize='15px' sx={{ color: '#64748b', marginRight: '3px',}} />
+              <StarOutlineIcon fontSize='15px' sx={{ color: '#ff8c00', marginRight: '3px',}} />
               <Typography
                 variant='body'
                 align='center'
@@ -74,7 +75,7 @@ export default function ProjectsShowCard({project}) {
               alignItems='center'
               width='120px'
               marginTop='5px'>
-              <TimelapseIcon fontSize='15px' sx={{ color: '#64748b', marginRight: '3px' }} />
+              <TimelapseIcon fontSize='15px' sx={{ color: '#ff8c00', marginRight: '3px' }} />
               <Typography
                 variant='body'
                 align='center'
@@ -90,7 +91,7 @@ export default function ProjectsShowCard({project}) {
               alignItems='center'
               width='120px'
               marginTop='5px'>
-              <AlignVerticalBottomIcon fontSize='15px' sx={{ color: '#64748b', marginRight: '3px' }} />
+              <AlignVerticalBottomIcon fontSize='15px' sx={{ color: '#ff8c00', marginRight: '3px' }} />
               <Typography
                 variant='body'
                 align='center'

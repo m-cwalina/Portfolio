@@ -14,6 +14,7 @@ import {
 import { Typography, Box } from '@mui/material';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { Link } from "react-router-dom";
+import Icon from '../skills/icons';
 
 ChartJS.register(
   CategoryScale,
