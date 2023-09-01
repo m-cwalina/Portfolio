@@ -50,7 +50,8 @@ const SkillCard = ({ skill, isLoading }) => {
         transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         transition: 'transform 0.3s ease-out',
         borderWidth: 1,
-        borderColor: '#f1f5f9'
+        borderColor: '#f1f5f9',
+        margin: 'auto'
       }}>
       <CardContent sx={{margin: 5}}>
         <Stack direction="column" spacing={1} justifyContent="center" alignItems="center">

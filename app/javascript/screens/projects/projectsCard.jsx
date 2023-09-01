@@ -42,6 +42,7 @@ export default function ProjectsCard({ project, isLoading }) {
           boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
           transition: 'transform 0.3s ease-out',
+          margin: 'auto',
         }}>
 
         <CardContent sx={{ padding: '5px' }}>
