@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-export default function Title({project}) {
+export default function TitleSection({project}) {
   return (
     <>
       <Typography

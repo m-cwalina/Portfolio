@@ -3,7 +3,7 @@ import { Card, CardActions, CardContent, Typography, Box, Stack} from '@mui/mate
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import {useLoaderData} from "react-router-dom";
 import Skeleton from '@mui/material/Skeleton';
-import Icon from './icons';
+import Icon from './Icons';
 import { Link, Outlet } from "react-router-dom";
 
 export async function loader() {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useLoaderData } from "react-router-dom";
 import { CardContent, Typography, Box, Stack, CardMedia} from '@mui/material';
 import CodeImage from './codeImage';
-import Icon from '../skills/icons';
+import Icon from '../skills/Icons';
 import ProjectIcon from '../../icons/project.png';
 import GitHubLinkIcon from '../../icons/gitlink.png';
 import ProjectDetailChart from './projectDetailChart';

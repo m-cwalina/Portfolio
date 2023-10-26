@@ -3,7 +3,7 @@ import { useLoaderData, Link } from "react-router-dom";
 import { Card, CardContent, Typography, Stack, CardActions, Box } from '@mui/material';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Icon from './icons';
+import Icon from './Icons';
 
 export async function loader({ params }) {
   const URL = `/api/v1/skills/${params.skillId}`;

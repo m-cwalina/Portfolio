@@ -39,7 +39,7 @@ export default function RubySection () {
             </p>
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{height: '500px'}}>
           <img src={FanLink}></img>
         </Box>
       </Box>

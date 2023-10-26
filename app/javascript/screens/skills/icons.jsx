@@ -17,7 +17,7 @@ import ReactRouterIcon from '../../icons/react-router.png'
 import BootstrapIcon from '../../icons/bootstrap.png'
 import MaterialUIIcon from '../../icons/materialui.png'
 
-export default function Icon(skill) {
+export default function Icons (skill) {
 
   const Icon = ({ icon }) => {
     switch (icon) {

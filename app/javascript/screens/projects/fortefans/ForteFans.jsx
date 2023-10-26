@@ -1,12 +1,12 @@
 import React from 'react'
 import { useLoaderData } from "react-router-dom";
 import { Typography, Box } from '@mui/material';
-import Title from './Title';
+import TitleSection from './TitleSection';
 import ReactNativeSection from './ReactNativeSection';
 import ReduxSection from './ReduxSection';
 import RubySection from './RubySection';
-import Posts from '../../../images/Posts.png'
-import Coins from '../../../images/Coins.png'
+import ExtraSection from './ExtraSection'
+
 
 
 
@@ -26,10 +26,11 @@ export default function ForteFans () {
 
   return (
     <Box sx={{paddingLeft: '15px', paddingRight: '15px'}}>
-      <Title project={project} />
+      <TitleSection project={project} />
       <ReactNativeSection />
       <ReduxSection />
       <RubySection />
+      <ExtraSection project={project} />
     </Box>
   )
 }
