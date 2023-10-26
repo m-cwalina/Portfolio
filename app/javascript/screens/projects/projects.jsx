@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLoaderData, Outlet } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import ProjectCard from './projectsCard';
 import { Box } from '@mui/material';
 
@@ -23,7 +23,7 @@ export default function Projects() {
       if (projects.length > 0) {
         setIsLoading(false);
       }
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [projects]);
@@ -36,9 +36,6 @@ export default function Projects() {
     <Box sx={{padding: '15px'}}>
       <div className='cards-container'>
         {projectCards}
-      </div>
-      <div className="outlet">
-        <Outlet />
       </div>
     </Box>
   )

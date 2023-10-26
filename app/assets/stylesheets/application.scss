@@ -22,20 +22,13 @@
 @import 'skills';
 @import 'contact';
 @import 'font_color';
-
-//  html, body {
-//   font-family: 'Roboto', sans-serif;
-//   color: #FFFFFF;
-//   background-image: linear-gradient(to bottom, #C193C5, #7BC6CC);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-//  }
+@import 'fortefans';
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: '#87AEDF';
   min-height: 100%;
+  text-transform: 'uppercase'
 }
 
 #content-wrapper {

@@ -11,14 +11,9 @@ import { Link } from "react-router-dom";
 
 export default function ProjectsCard({ project, isLoading }) {
   const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const handleMouseEnter = () => { setIsHovered(true);};
+  const handleMouseLeave = () => { setIsHovered(false); };
+  console.log(project.title)
 
   if (isLoading) {
     return (
@@ -30,7 +25,7 @@ export default function ProjectsCard({ project, isLoading }) {
   }
 
   return (
-    <Link to={`${project.id}`}>
+    <Link to={`${project.title}/${project.id}`}>
       <Card
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -42,9 +37,7 @@ export default function ProjectsCard({ project, isLoading }) {
           boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5)',
           transform: isHovered ? 'scale(1.05)' : 'scale(1)',
           transition: 'transform 0.3s ease-out',
-          margin: 'auto',
-        }}>
-
+          margin: 'auto',}}>
         <CardContent sx={{ padding: '5px' }}>
 
           <Box
