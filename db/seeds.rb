@@ -61,8 +61,7 @@ Project.create(
   password: 'password',
   git: 'https://github.com/m-cwalina/ConnectGolf',
   short_description: 'Connect with your golf members',
-  description: 'A web application to connect golfers with their club and other members.
-                Also provided is an Admin DashBoard for a booking system and club statistics.',
+  description: 'A web based application to connect golfers with their club and other members.',
   learn: 'This project brought together React.js with React-Router to build a SPA appliaction.
           I also moved into Chart.js to show data in a friendly UI format. The Rails API handles
           authentication through Devise and PostgreSQL for a DB.',
