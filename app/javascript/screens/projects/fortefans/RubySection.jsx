@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Box, Divider } from '@mui/material';
-import FanLink from '../../../images/FanLink.png'
+import FanLink from '../../../images/MacBookProFanLink.png'
 
 
 export default function RubySection () {
@@ -15,7 +15,7 @@ export default function RubySection () {
       </Typography>
       <Divider sx={{ backgroundColor: '#ff8c00', height: '2px', marginBottom: '50px' }} />
       <Box display='flex'>
-        <Box>
+        <Box width='50%'>
           <Typography
             variant='h2'
             align='left'
@@ -24,10 +24,10 @@ export default function RubySection () {
             Ruby | Rails
           </Typography>
           <Typography
-            variant='body1'
+            variant='body2'
             align='left'
-            color='#A0A3A8'
-            sx={{ padding: '30px', fontSize: '25px' }}>
+            color='#CCCCCC'
+            sx={{ padding: '30px', fontSize: '25px', textAlign: 'justify' }}>
             <p>
             The mobile application is supported by a RESTful API built with Ruby on Rails. This model handles queries, virtual attributes, validations and relations for FanLinks. The caluculate_daily_views is an instance method that returns a hash of dates as keys and values as count always with 7 dates. The object is added to the FanLink Instance through the attribute daily_views.
             </p>
@@ -39,8 +39,8 @@ export default function RubySection () {
             </p>
           </Typography>
         </Box>
-        <Box sx={{height: '500px'}}>
-          <img src={FanLink}></img>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50%' }}>
+          <img className='fanlink-image' src={FanLink}></img>
         </Box>
       </Box>
     </>

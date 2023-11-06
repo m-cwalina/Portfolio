@@ -7,9 +7,6 @@ import ReduxSection from './ReduxSection';
 import RubySection from './RubySection';
 import ExtraSection from './ExtraSection'
 
-
-
-
 export async function loader({ params }) {
   const URL = `/api/v1/projects/${params.projectId}`;
   try {

@@ -10,6 +10,7 @@ import Projects, {loader as projectsLoader} from '../screens/projects/projects';
 import ProjectDetails, {loader as projectDetailsLoader} from '../screens/projects/projectDetails';
 import HomePageContent, { loader as projectsShowLoader } from '../screens/home/homePageContent';
 import ForteFans, {loader as forteFansLoader} from '../screens/projects/fortefans/ForteFans';
+import ConnectGolf, { loader as connectGolfLoader } from '../screens/projects/connectgolf/ConnectGolf';
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,10 @@ const router = createBrowserRouter([
         loader: projectDetailsLoader },
       { path: '/projects/ForteFans/:projectId',
         element: <ForteFans />,
-        loader: forteFansLoader }
+        loader: forteFansLoader },
+      { path: '/projects/ConnectGolf/:projectId',
+        element: <ConnectGolf />,
+        loader: connectGolfLoader }
     ],
   },
 ]);
