@@ -11,12 +11,12 @@ export default function ExtraSection({ project }) {
         align='left'
         color='#ff8c00'
         sx={{ padding: '30px', fontWeight: 'bold' }}>
-        Extra
+        Extras
       </Typography>
       <Divider sx={{ backgroundColor: '#ff8c00', height: '2px', marginBottom: '50px' }} />
       <Typography
         variant='h2'
-        align='center'
+        align='centser'
         color='#EDF0F5'
         sx={{ padding: '30px', fontWeight: 'bold' }}>
         Tech Stack
