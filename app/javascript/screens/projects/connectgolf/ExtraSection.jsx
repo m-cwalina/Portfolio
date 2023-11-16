@@ -11,7 +11,7 @@ export default function ExtraSection({ project }) {
         align='left'
         color='#ff8c00'
         sx={{ padding: '30px', fontWeight: 'bold' }}>
-        Extras
+        Extrasssss
       </Typography>
       <Divider sx={{ backgroundColor: '#ff8c00', height: '2px', marginBottom: '50px' }} />
       <Typography
