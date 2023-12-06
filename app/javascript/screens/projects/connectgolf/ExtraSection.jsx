@@ -19,7 +19,7 @@ export default function ExtraSection({ project }) {
         align='centser'
         color='#EDF0F5'
         sx={{ padding: '30px', fontWeight: 'bold' }}>
-        Tech Stack
+        TechStack
       </Typography>
       <Box
         align='center'
